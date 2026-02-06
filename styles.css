@@ -1295,16 +1295,6 @@ footer p:not(.quicklinks-heading) {
     }
 
     .search-sign {
-        flex-direction: column;
-        margin-left: 0;
-        position: absolute;
-        top: .25em;
-        left: 0;
-        width: 100%;
-        padding-right: .5em;
-    }
-
-    .search-sign > ul {
         display: none;
     }
 

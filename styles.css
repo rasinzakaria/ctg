@@ -1245,6 +1245,7 @@ footer p:not(.quicklinks-heading) {
         display: block;
         order: 2;
         float: right;
+        margin-top: 0;
     }
 
     .navbar-header {
@@ -1318,6 +1319,7 @@ footer p:not(.quicklinks-heading) {
 
     .header-group {
         top: 0;
+        padding-top: 0;
     }
 
     .collection-row {

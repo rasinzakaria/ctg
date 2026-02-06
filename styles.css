@@ -1278,6 +1278,15 @@ footer p:not(.quicklinks-heading) {
         transform: scale(1);
     }
 
+    .navbar-default {
+        background-color: #fff !important;
+        border-color: transparent !important;
+    }
+
+    .navbar-default .navbar-toggle {
+        border-color: #fff !important;
+    }
+
     .navbar-nav {
         float: none !important;
         margin: 0;

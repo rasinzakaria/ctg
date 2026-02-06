@@ -99,21 +99,6 @@ h4, h5, h6, p, a, span, div, li {
     padding-right: 0 !important;
 }
 
-/* Ensure featured-row uses grid */
-.featured-row {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0 !important;
-    margin: 0 !important;
-}
-
-.featured-item {
-    display: block !important;
-    width: 100% !important;
-    float: none !important;
-    position: relative !important;
-}
-
 @media (min-width: 544px) {
     .container {
         max-width: 1920px;
@@ -811,22 +796,6 @@ header .navbar-nav > li > a:focus {
     background-color: #fff;
 }
 
-.brands-header {
-    background: #ffffff;
-    color: #111;
-    padding: 20px;
-    border: 1px solid #eaeaea;
-    border-bottom: 0px;
-    padding-top: 30px;
-}
-
-.brands-header div {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    color: black;
-}
-
 .brands-heading {
     text-align: center;
     font-family: 'EB Garamond', serif;
@@ -992,17 +961,6 @@ header .navbar-nav > li > a:focus {
     color: #fff;
 }
 
-.cta,
-.featured-images .overlay a {
-    background: #1e1e1e;
-    text-shadow: initial;
-    text-transform: uppercase;
-    font-size: 13px !important;
-    letter-spacing: 1px;
-    font-weight: 400 !important;
-    padding: 16px 40px;
-}
-
 /* ============================================
    FOOTER
    ============================================ */
@@ -1144,7 +1102,6 @@ footer p:not(.quicklinks-heading) {
 
 .social-link {
     color: #666;
-    font-size: 20px;
     text-decoration: none;
     transition: color 0.3s;
     border: 1px solid;
@@ -1232,7 +1189,7 @@ footer p:not(.quicklinks-heading) {
    ============================================ */
 @media (max-width: 991px) {
     .footer-row {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 }
 
@@ -1399,13 +1356,6 @@ footer p:not(.quicklinks-heading) {
     .scroll-to-top {
         bottom: 1em !important;
         right: 1em !important;
-    }
-}
-
-@media (max-width: 910px) {
-    .reveal .navbar.navbar-default {
-        background: #ffffff;
-        color: #111111;
     }
 }
 

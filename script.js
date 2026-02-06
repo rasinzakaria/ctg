@@ -173,33 +173,6 @@ document.querySelectorAll('.email-form').forEach(form => {
     });
 });
 
-// Handle dropdown menus on mobile
-document.querySelectorAll('.dropdown').forEach(dropdown => {
-    const toggle = dropdown.querySelector('.dropdown-toggle');
-    if (toggle) {
-        toggle.addEventListener('click', function(e) {
-            if (window.innerWidth <= 767) {
-                e.preventDefault();
-                const megaMenu = dropdown.querySelector('.mega-menu');
-                if (megaMenu) {
-                    megaMenu.style.display = megaMenu.style.display === 'block' ? 'none' : 'block';
-                }
-            }
-        });
-    }
-});
-
-// Close dropdowns when clicking outside
-document.addEventListener('click', function(event) {
-    if (!event.target.closest('.dropdown')) {
-        document.querySelectorAll('.mega-menu').forEach(menu => {
-            if (window.innerWidth <= 767) {
-                menu.style.display = 'none';
-            }
-        });
-    }
-});
-
 // Responsive carousel adjustments
 window.addEventListener('resize', function() {
     updateCarousel();

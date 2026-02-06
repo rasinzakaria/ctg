@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CTG Brands is a Canadian importer and distributor of consumer-packaged products geared to the North American retail industry.">
+    <title>Home - CTG Brands Inc - Your Partner in Product Solutions</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Ionicons -->
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- SITE -->
+    <div id="site">
+        <!-- HEADER -->
+        <div class="header-group">
+            <div class="container-fluid">
+                <!-- Master Header Top (Announcement Banner) -->
+                <div class="row master-header-top c1-bg c5-text ng-cloak" id="announcementBanner">
+                    <button class="close-btn" onclick="closeBanner()"><span>x</span></button>
+                    <div class="col-xl-12 text-center">
+                        <div class="promo-banner-wrap">
+                            <a class="promo-banner-link" href="#">Contact your sales rep today to book your January Open House appointment!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Header -->
+                <header>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!-- LOGO -->
+                            <a href="/">
+                                <img id="logo" src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands logo" />
+                            </a>
+
+                            <!-- NAVIGATION -->
+                            <div class="navigation">
+                                <div class="reveal">
+                                    <div class="flex-menu">
+                                        <div class="navbar-header navbar-default">
+                                            <button type="button" id="yamm-mobile" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle expand">
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="glyphicon glyphicon-remove hidden fa-lg" aria-hidden="true"></span>
+                                                <span class="menu-text">Menu</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="navbar navbar-default yamm">
+                                            <button type="button" id="yamm-mobile2" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle expand">
+                                                <span class="glyphicon glyphicon-remove fa-lg" aria-hidden="true"></span>
+                                                <span class="menu-text">Menu</span>
+                                            </button>
+                                            
+                                            <div id="navbar-collapse-grid" class="navbar-collapse collapse">
+                                                <ul class="nav navbar-nav">
+                                                    <li class="dropdown yamm">
+                                                        <a href="#" class="dropdown-toggle">Everyday</a>
+                                                        <ul class="dropdown-menu yamm" role="menu">
+                                                            <li class="dropdown yamm">
+                                                                <div id="wide-col" class="col-xs-12">
+                                                                    <div class="spc umb-grid">
+                                                                        <div class="umb-grid">
+                                                                            <div class="grid-section">
+                                                                                <div>
+                                                                                    <div class="usn-sc-container m-b-1">
+                                                                                        <div class="row clearfix">
+                                                                                            <div class="col-vh col-md-2 column">
+                                                                                                <div>
+                                                                                                    <div>
+                                                                                                        <div class="clearfix">
+                                                                                                            <a class="btn btn-mega1st btn-block menu-cta" href="/shop/?MainCategory=Everyday">Shop All</a>
+                                                                                                            <a class="btn btn-mega1st btn-block" href="/everyday/">View Collection</a>
+                                                                                                            <a class="btn btn-mega1st btn-block" href="#">New Arrivals</a>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-vh col-md-6 column">
+                                                                                                <div>
+                                                                                                    <div>
+                                                                                                        <p class="nav-header">Shop By Product Type</p>
+                                                                                                        <div class="three-column-nav clearfix">
+                                                                                                            <a class="btn btn-mega2nd btn-block" href="#">Personal Care</a>
+                                                                                                            <a class="btn btn-mega2nd btn-block" href="#">Kitchenware</a>
+                                                                                                            <a class="btn btn-mega2nd btn-block" href="#">Home Essentials</a>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-vh col-md-2 column">
+                                                                                                <div>
+                                                                                                    <div>
+                                                                                                        <p class="nav-header">Top Brands</p>
+                                                                                                        <div class="clearfix">
+                                                                                                            <a class="btn btn-mega2nd btn-block" href="#">BODICO</a>
+                                                                                                            <a class="btn btn-mega2nd btn-block" href="#">Excel Vision</a>
+                                                                                                            <a class="btn btn-mega2nd btn-block" href="#">Global</a>
+                                                                                                            <a class="btn btn-mega2nd btn-block" href="#">Home Essential Master Pro</a>
+                                                                                                            <a class="btn btn-mega2nd btn-block" href="#">Home Essentials</a>
+                                                                                                            <a class="btn btn-mega2nd btn-block" href="#">iDesign Graphics</a>
+                                                                                                            <a class="btn btn-mega2nd btn-block" href="#">iFocus</a>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-vh col-md-2 column">
+                                                                                                <div>
+                                                                                                    <div class="promo-image">
+                                                                                                        <div class="clearfix">
+                                                                                                            <a href="#">
+                                                                                                                <img class="img-responsive img-center" style="width:100%;" loading="lazy" src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTA4OC8wNjAxMDcwMjkxMTNldjAxLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciJ9fX0=?3308=/media/1088/060107029113ev01.jpg" alt="Shop Personal Care" />
+                                                                                                            </a>
+                                                                                                        </div>
+                                                                                                        <h3>Shop Personal Care</h3>
+                                                                                                        <div class="clearfix">
+                                                                                                            <a class="btn btn-default cta" href="#">Shop Now</a>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown yamm">
+                                                        <a href="#" class="dropdown-toggle">Seasonal</a>
+                                                        <ul class="dropdown-menu yamm" role="menu">
+                                                            <li class="dropdown yamm">
+                                                                <div id="wide-col" class="col-xs-12">
+                                                                    <div class="spc umb-grid">
+                                                                        <div class="umb-grid">
+                                                                            <div class="grid-section">
+                                                                                <div>
+                                                                                    <div class="usn-sc-container m-b-1">
+                                                                                        <div class="row clearfix">
+                                                                                            <div class="col-vh col-md-2 column">
+                                                                                                <div class="clearfix">
+                                                                                                    <a class="btn btn-mega1st btn-block menu-cta" href="/shop/?MainCategory=Seasonal">Shop All</a>
+                                                                                                    <a class="btn btn-mega1st btn-block" href="/seasonal/">View Collection</a>
+                                                                                                    <a class="btn btn-mega1st btn-block" href="#">New Arrivals</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-vh col-md-4 column">
+                                                                                                <p class="nav-header">Shop By Product Type</p>
+                                                                                                <div class="two-column-nav clearfix">
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">Christmas</a>
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">Halloween</a>
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">Easter</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-vh col-md-3 column">
+                                                                                                <p class="nav-header">Top Brands</p>
+                                                                                                <div class="clearfix">
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">Santa's Secrets</a>
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">Deco Noel</a>
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">Ghostly Ghouls</a>
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">Sunny Dayz</a>
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">Better Barbeques</a>
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">Garden Essentials</a>
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">Easter Treasures</a>
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">Country Gardens</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-vh col-md-3 column">
+                                                                                                <div class="promo-image">
+                                                                                                    <a href="#">
+                                                                                                        <img class="img-responsive img-center" style="width:100%;" loading="lazy" src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAzMS9ob21lcGFnZS1zZWFzb25hbC1vcHRpb24tMi5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3133=/media/1031/homepage-seasonal-option-2.jpg" alt="Christmas Tree" />
+                                                                                                    </a>
+                                                                                                    <h3>Home for the holidays</h3>
+                                                                                                    <a class="btn btn-default cta" href="#">View New Collection</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown yamm">
+                                                        <a href="#" class="dropdown-toggle">Home Décor</a>
+                                                        <ul class="dropdown-menu yamm" role="menu">
+                                                            <li class="dropdown yamm">
+                                                                <div id="wide-col" class="col-xs-12">
+                                                                    <div class="spc umb-grid">
+                                                                        <div class="umb-grid">
+                                                                            <div class="grid-section">
+                                                                                <div>
+                                                                                    <div class="usn-sc-container m-b-1">
+                                                                                        <div class="row clearfix">
+                                                                                            <div class="col-vh col-md-2 column">
+                                                                                                <div class="clearfix">
+                                                                                                    <a class="btn btn-mega1st btn-block menu-cta" href="#">Shop All</a>
+                                                                                                    <a class="btn btn-mega1st btn-block" href="/home-décor/">View Collection</a>
+                                                                                                    <a class="btn btn-mega1st btn-block" href="#">New Arrivals</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-vh col-md-4 column">
+                                                                                                <p class="nav-header">Shop By Product Type</p>
+                                                                                                <div class="two-column-nav clearfix">
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">Giftware</a>
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">Decorative Items</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-vh col-md-3 column">
+                                                                                                <p class="nav-header">Top Brands</p>
+                                                                                                <div class="clearfix">
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">Truu Design</a>
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">AZ Home</a>
+                                                                                                    <a class="btn btn-mega2nd btn-block" href="#">Kierra Grace</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-vh col-md-3 column">
+                                                                                                <div class="promo-image">
+                                                                                                    <a href="#">
+                                                                                                        <img class="img-responsive img-center" style="width:100%;" loading="lazy" src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTA4My8wNjI4MjM2NTcwMTRldjAxLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciJ9fX0=?3302=/media/1083/062823657014ev01.jpg" alt="Shop Giftware" />
+                                                                                                    </a>
+                                                                                                    <h3>SHOP GIFTWARE</h3>
+                                                                                                    <a class="btn btn-default cta" href="#">Shop Now</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown yamm">
+                                                        <a href="#" class="dropdown-toggle">Brands</a>
+                                                        <ul class="dropdown-menu yamm" role="menu">
+                                                            <li class="dropdown yamm">
+                                                                <div id="wide-col" class="col-xs-12">
+                                                                    <div class="spc umb-grid">
+                                                                        <div class="umb-grid">
+                                                                            <div class="grid-section">
+                                                                                <div class="brands-dropdown">
+                                                                                    <div class="usn-sc-container m-b-1">
+                                                                                        <div class="row clearfix">
+                                                                                            <div class="col-vh col-md-4 column">
+                                                                                                <div class="view-brands-link">
+                                                                                                    <a class="btn btn-mega1st menu-cta" href="/brands/">View Brands List</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-vh col-md-4 column">
+                                                                                                <div class="brands-menu">
+                                                                                                    <p class="nav-header">Top Everyday Brands</p>
+                                                                                                    <div class="clearfix">
+                                                                                                        <a class="btn btn-mega2nd btn-block" href="#">Kiera Grace</a>
+                                                                                                        <a class="btn btn-mega2nd btn-block" href="#">BODICO</a>
+                                                                                                        <a class="btn btn-mega2nd btn-block" href="#">Giftcraft</a>
+                                                                                                        <a class="btn btn-mega2nd btn-block" href="#">Yes Designs</a>
+                                                                                                        <a class="btn btn-mega2nd btn-block" href="#">HUGS</a>
+                                                                                                        <a class="btn btn-mega2nd btn-block" href="#">Maison</a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-vh col-md-4 column">
+                                                                                                <div class="brands-menu">
+                                                                                                    <p class="nav-header">Top Seasonal Brands</p>
+                                                                                                    <div class="clearfix">
+                                                                                                        <a class="btn btn-mega2nd btn-block" href="#">Better Barbeques</a>
+                                                                                                        <a class="btn btn-mega2nd btn-block" href="#">Camping Essentials</a>
+                                                                                                        <a class="btn btn-mega2nd btn-block" href="#">Sunny Days</a>
+                                                                                                        <a class="btn btn-mega2nd btn-block" href="#">Country Garden</a>
+                                                                                                        <a class="btn btn-mega2nd btn-block" href="#">Pool Party</a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown yamm">
+                                                        <a href="/about/" class="dropdown-normal"><span>Our Story</span></a>
+                                                    </li>
+                                                    <li class="dropdown yamm">
+                                                        <a href="/catalogs/" class="dropdown-normal">Catalogs</a>
+                                                    </li>
+                                                    <li class="dropdown yamm">
+                                                        <a href="/shop/?Sale=Sale">Sale</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="search-sign">
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-lg fa-shopping-cart highlight"></i>
+                                                    <span class="badge badge-sup cart-count">0</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/wholesale-account-access/">Login</a>
+                                            </li>
+                                            <li>|</li>
+                                            <li>
+                                                <a href="#">Become a Retailer</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Devenir détaillant</a>
+                                            </li>
+                                        </ul>
+                                        <div class="site-search">
+                                            <form role="search" method="get" name="searchForm">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="search_field" name="search_field" required>
+                                                    <label class="control-label" for="search_field">Search the site</label>
+                                                </div>
+                                                <button type="submit" class="c1-bg c5-text" aria-label="Search the site"><i class="ion-ios-search-strong"></i></button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <!--// HEADER -->
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>One destination.<br>Endless wholesale possibilities.</h1>
+            <a href="/registration/" class="hero-btn">Become Our Customer</a>
+        </div>
+    </section>
+
+    <!-- Trending Categories -->
+    <section class="trending-categories">
+        <div class="container">
+            <h4 class="section-label">TRENDING CATEGORIES</h4>
+            <div class="collection-row">
+                <div class="collection-card">
+                    <a href="/seasonal/" class="img-link">
+                        <img src="https://www.ctgbrands.com/media/1470/seasonal-9.png" alt="Seasonal Collection" />
+                    </a>
+                    <div class="card-text">
+                        <h3 class="card-title">Seasonal Collection</h3>
+                        <p class="card-body">Seasonal must-haves, designed for every key holiday moment.</p>
+                        <a href="/seasonal/" class="cta-link">SHOP SEASONAL →</a>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <a href="/everyday/" class="img-link">
+                        <img src="https://www.ctgbrands.com/media/1469/everyday-9.png" alt="Everyday Collection" />
+                    </a>
+                    <div class="card-text">
+                        <h3 class="card-title">Everyday Collection</h3>
+                        <p class="card-body">Core essentials, thoughtfully curated for everyday demand.</p>
+                        <a href="/everyday/" class="cta-link">SHOP COLLECTION →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Decor Section -->
+    <section class="home-decor">
+        <div class="container">
+            <h4 class="section-label">Home Decor</h4>
+            <div class="decor-row">
+                <div class="decor-card">
+                    <div class="overlay-wrapper">
+                        <img src="https://www.ctgbrands.com/media/1474/kiera-grace.png" alt="Kiera Grace" />
+                        <div class="overlay-card">
+                            <h3>Kiera Grace</h3>
+                            <a href="#" class="arrow-link">EXPLORE BRAND →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="decor-card">
+                    <div class="overlay-wrapper">
+                        <img src="https://www.ctgbrands.com/media/1475/truu-design.png" alt="Truu Design" />
+                        <div class="overlay-card">
+                            <h3>Truu Design</h3>
+                            <a href="#" class="arrow-link">EXPLORE BRAND →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="decor-card">
+                    <div class="overlay-wrapper">
+                        <img src="https://www.ctgbrands.com/media/1468/enlighten-samples-7-1.png" alt="Enlighten" />
+                        <div class="overlay-card">
+                            <h3>Enlighten</h3>
+                            <a href="#" class="arrow-link">EXPLORE BRAND →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Become a CTG Partner -->
+    <section class="partner-section">
+        <div class="container">
+            <div class="partner-content">
+                <div class="partner-text">
+                    <h2>Become a CTG Partner</h2>
+                    <p>We bring years of wholesale expertise together with a hands-on, partner-first approach working as an extension of your team. From sourcing to fulfillment, we deliver clarity, speed, and market insight at every stage, helping you stay ahead of demand while meeting your commercial goals.</p>
+                    <p>With a strong track record across North America and a focus on long-term relationships, we don't just supply products, we support sustainable growth, season after season.</p>
+                    <p>Create your account today and connect with one of our sales experts to explore how CTG can support your business goals.</p>
+                </div>
+                <div class="partner-btn-container">
+                    <a href="/registration/" class="solid-btn">Sign Up Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Brands -->
+    <section class="trending-brands">
+        <div class="container">
+            <h4 class="section-label">TRENDING BRANDS</h4>
+            <div class="collection-row">
+                <div class="collection-card">
+                    <a href="#" class="img-link">
+                        <img src="https://www.ctgbrands.com/media/1472/luciano-9.png" alt="Luciano" />
+                    </a>
+                    <div class="card-text">
+                        <h3 class="card-title">Luciano</h3>
+                        <p class="card-body">Premium kitchen essentials, made to last.</p>
+                        <a href="#" class="cta-link">SHOP Now →</a>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <a href="#" class="img-link">
+                        <img src="https://www.ctgbrands.com/media/1471/bodico-9.png" alt="Bodico" />
+                    </a>
+                    <div class="card-text">
+                        <h3 class="card-title">Bodico</h3>
+                        <p class="card-body">Everyday bathroom essentials, done better.</p>
+                        <a href="#" class="cta-link">SHOP NOW →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Brands -->
+    <section class="our-brands">
+        <div class="container">
+            <h2 class="brands-heading">Our Brands</h2>
+            <div class="brands-carousel">
+                <div class="carousel-container" id="brandsCarousel">
+                    <div class="carousel-track">
+                        <div class="brand-logo"><img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTI1Ni8yLWJldHRlci1iYnEtMDkxNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3513=/media/1256/2-better-bbq-0914.png" alt="Better BBQs" /></div>
+                        <div class="brand-logo"><img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTIyNS8zLTFib2RpY28tMDgyNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3471=/media/1225/3-1bodico-0827.png" alt="Bodico" /></div>
+                        <div class="brand-logo"><img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTE4OC80LWNhbXBpbmctdG0tMDgyNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3428=/media/1188/4-camping-tm-0826.png" alt="Camping Essentials" /></div>
+                        <div class="brand-logo"><img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTIwNS8yMS1raWRzLWtyYWZ0LTA4MjYucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3445=/media/1205/21-kids-kraft-0826.png" alt="Kids Kraft" /></div>
+                        <div class="brand-logo"><img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTIyOC8yMi0xa2llcmEtZ3JhY2UtMDgyNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3474=/media/1228/22-1kiera-grace-0827.png" alt="Kiera Grace" /></div>
+                        <div class="brand-logo"><img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTIwNy8yMy1sZXRzLXBhcnR5MDgyNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3447=/media/1207/23-lets-party0826.png" alt="Let's Party" /></div>
+                        <div class="brand-logo"><img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTIwNC8yMC1pLWZvY3VzLTA4MjYucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3444=/media/1204/20-i-focus-0826.png" alt="iFocus" /></div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" onclick="moveCarousel(-1)">‹</button>
+                <button class="carousel-btn next" onclick="moveCarousel(1)">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Images -->
+    <section class="featured-images">
+        <div class="container-fluid">
+            <div class="featured-row">
+                <div class="featured-item">
+                    <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTQ0MS9hdWd1c3Qtc29jaWFsLW1lZGlhLTEzLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciJ9fX0=?3774=/media/1441/august-social-media-13.jpg" alt="True North" />
+                    <div class="featured-overlay">
+                        <h3>True North</h3>
+                        <a href="#" class="featured-cta featured-cta-white">SHOP NOW</a>
+                    </div>
+                </div>
+                <div class="featured-item">
+                    <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTM4My8xMDAtcGxhLWJpb2RlZ3JhbmRhYmxlLXN0cmF3cy0yMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3691=/media/1383/100-pla-biodegrandable-straws-20.png" alt="EASTER" />
+                    <div class="featured-overlay">
+                        <h3>EASTER</h3>
+                        <p>Spring Has Officially Sprung</p>
+                        <a href="#" class="featured-cta featured-cta-black">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="footer-row">
+                    <div class="footer-col">
+                        <nav class="footer-nav">
+                            <p class="footer-heading">General Information</p>
+                            <ul>
+                                <li><a href="#">New Releases</a></li>
+                                <li><a href="/contact/">Contact</a></li>
+                                <li><a href="/terms-of-use/">Terms of Use</a></li>
+                                <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                                <li><a href="/accessibility-policy/">Accessibility Policy</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-col">
+                        <nav class="footer-nav">
+                            <p class="footer-heading">Featured</p>
+                            <ul>
+                                <li><a href="/everyday/">Everyday</a></li>
+                                <li><a href="/seasonal/">Seasonal</a></li>
+                                <li><a href="/home-décor/">Home Décor</a></li>
+                                <li><a href="/brands/">Brands</a></li>
+                                <li><a href="/news/">News</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-col">
+                        <nav class="footer-nav">
+                            <p class="footer-heading">Resources</p>
+                            <ul>
+                                <li><a href="/registration/">New Customers & Forms</a></li>
+                                <li><a href="/supplier-request/">Become a Supplier</a></li>
+                                <li><a href="/careers/">Careers</a></li>
+                                <li><a href="/faq/">FAQ</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-col">
+                        <p class="footer-heading">Keep in Touch</p>
+                        <p>Sign up for our eblasts and be the first to know about new products and special promotions</p>
+                        <form class="email-form" action="#" method="post">
+                            <div class="form-group">
+                                <input type="email" name="email" id="footer-email" placeholder="Enter your email" required>
+                            </div>
+                            <button type="submit" class="subscribe-btn">Subscribe</button>
+                        </form>
+                        <nav class="social-nav">
+                            <a href="https://www.facebook.com/officialCTGBrands" target="_blank" class="social-link"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.linkedin.com/company/ctgbrands" target="_blank" class="social-link"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/ctgbrands/" target="_blank" class="social-link"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UCGo6gILYenqRCL9CyMkOtvA" target="_blank" class="social-link"><i class="fa fa-youtube-play"></i></a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <div id="scrollToTop" class="scroll-to-top">
+        <a href="#top" onclick="scrollToTop();return false;">
+            <i class="ion-chevron-up"></i>
+            <p>scroll<br>to top</p>
+        </a>
+    </div>
+    <!--// BACK TO TOP -->
+    </div>
+    <!--// SITE -->
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

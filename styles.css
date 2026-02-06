@@ -1308,7 +1308,7 @@ footer p:not(.quicklinks-heading) {
     }
 
     header {
-        padding-top: 2em;
+        padding-top: 0;
     }
 
     .search-sign > ul {

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently asked questions about CTG Brands — ordering, products, brands, and more.">
+    <title>FAQ - CTG Brands Inc</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'wheat': '#f5f5f5',
+                        'evergreen': '#2d2d2d',
+                        'evergreen-dark': '#141414',
+                        'sand': '#f5f5f5',
+                        'clay': '#888888'
+                    },
+                    fontFamily: {
+                        'century': ['"century-old-style-std"', 'Georgia', '"Times New Roman"', 'serif'],
+                        'sentinel': ['Sentinel', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    maxWidth: {
+                        'bleed': '2500px',
+                        'grid': '2000px',
+                        'content': '1060px',
+                        'text-wide': '665px',
+                        'text-narrow': '460px',
+                    },
+                    borderRadius: {
+                        '4': '4px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url("https://use.typekit.net/zwn8qqz.css");
+
+        body {
+            font-family: "sentinel-a", "sentinel-b", Georgia, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .font-century {
+            font-family: "century-old-style-std", serif;
+        }
+
+        .body12-caps {
+            font-size: 12px;
+            line-height: 170%;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+        }
+
+        .cta-compressed {
+            display: inline-block;
+            border: 1px solid currentColor;
+            border-radius: 100px;
+            padding: 8px 24px;
+            font-size: 14px;
+            font-style: italic;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .cta-compressed:hover { opacity: 0.7; }
+
+        .cta-compressed.green { border-color: #141414; color: #141414; }
+        .cta-compressed.transparent { border-color: #f5f5f5; color: #f5f5f5; }
+
+        /* Header */
+        .header-scrolled {
+            background-color: rgba(245, 245, 245, 0.97) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .header-scrolled nav { color: #141414 !important; }
+        .header-scrolled .cta-compressed.transparent { border-color: #141414; color: #141414; }
+        .header-scrolled .logo-light { display: none; }
+        .header-scrolled .logo-dark { display: block !important; }
+
+        /* Scroll to top */
+        .scroll-to-top {
+            position: fixed; bottom: 5em; right: 2em; z-index: 1000;
+            display: none; transition: opacity 0.3s ease;
+        }
+        .scroll-to-top.show { display: block; opacity: 1; }
+
+        /* ── Editorial Typography ── */
+
+        .heading-editorial {
+            font-style: italic;
+            letter-spacing: -0.01em;
+        }
+
+        .body-editorial {
+            font-size: 15px;
+            line-height: 1.85;
+            opacity: 0.6;
+        }
+        @media (min-width: 768px) {
+            .body-editorial { font-size: 16px; line-height: 1.9; }
+        }
+
+        /* ── FAQ Accordion ── */
+
+        .faq-item {
+            border-bottom: 1px solid rgba(20, 20, 20, 0.08);
+            transition: background-color 0.3s ease;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+            margin-left: -1.25rem;
+            margin-right: -1.25rem;
+            border-radius: 4px;
+        }
+        .faq-item:first-child {
+            border-top: 1px solid rgba(20, 20, 20, 0.08);
+        }
+        .faq-item:hover {
+            background-color: rgba(20, 20, 20, 0.015);
+        }
+        .faq-item.open {
+            background-color: rgba(20, 20, 20, 0.02);
+        }
+
+        .faq-question {
+            cursor: pointer;
+            user-select: none;
+        }
+        .faq-question:focus-visible {
+            outline: 2px solid rgba(20, 20, 20, 0.2);
+            outline-offset: 4px;
+            border-radius: 2px;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 600px;
+            opacity: 1;
+        }
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        /* Sticky sidebar */
+        @media (min-width: 768px) {
+            .faq-sidebar {
+                position: sticky;
+                top: 120px;
+            }
+        }
+
+        /* ── Animations ── */
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-label { animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both; }
+        .hero-title { animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both; }
+        .hero-sub   { animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both; }
+
+        .cta-compressed.green:hover {
+            background-color: #141414;
+            color: #f5f5f5;
+            border-color: #141414;
+            opacity: 1;
+        }
+        .cta-compressed.transparent:hover {
+            background-color: rgba(255,255,255,0.12);
+            opacity: 1;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.revealed { opacity: 1; transform: translateY(0); }
+        .reveal-d1 { transition-delay: 0.1s; }
+        .reveal-d2 { transition-delay: 0.2s; }
+
+        /* Mobile menu */
+        #mobileMenu { opacity: 0; pointer-events: none; transition: opacity 0.35s ease; }
+        #mobileMenu:not(.hidden) { opacity: 1; pointer-events: auto; }
+        #mobileMenu nav a, #mobileMenu nav > div {
+            opacity: 0; transform: translateY(16px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        #mobileMenu:not(.hidden) nav a, #mobileMenu:not(.hidden) nav > div {
+            opacity: 1; transform: translateY(0);
+        }
+        #mobileMenu:not(.hidden) nav a:nth-child(1) { transition-delay: 0.06s; }
+        #mobileMenu:not(.hidden) nav a:nth-child(2) { transition-delay: 0.10s; }
+        #mobileMenu:not(.hidden) nav a:nth-child(3) { transition-delay: 0.14s; }
+        #mobileMenu:not(.hidden) nav a:nth-child(4) { transition-delay: 0.18s; }
+        #mobileMenu:not(.hidden) nav a:nth-child(5) { transition-delay: 0.22s; }
+        #mobileMenu:not(.hidden) nav a:nth-child(6) { transition-delay: 0.26s; }
+        #mobileMenu:not(.hidden) nav a:nth-child(7) { transition-delay: 0.30s; }
+        #mobileMenu:not(.hidden) nav > div { transition-delay: 0.38s; }
+
+        .footer-logo { opacity: 0.15; transition: opacity 0.3s ease; }
+        .footer-logo:hover { opacity: 0.3; }
+
+    </style>
+</head>
+<body class="bg-wheat text-evergreen-dark antialiased">
+
+    <!-- HEADER -->
+    <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 py-4 md:pt-8 md:pb-4 header-scrolled">
+        <nav class="relative mx-auto flex items-center justify-between px-6 md:px-10 max-w-grid text-evergreen-dark">
+            <button id="mobileMenuBtn" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+            <ul class="hidden md:flex flex-1 justify-start body12-caps gap-8 items-center">
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Everyday</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Seasonal</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Home Décor</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Brands</a></li>
+            </ul>
+            <a href="index.html" class="flex-shrink-0 mx-auto">
+                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands logo" class="h-10 md:h-12 w-auto" />
+            </a>
+            <ul class="hidden md:flex flex-1 justify-end body12-caps gap-8 items-center">
+                <li><a href="about.html" class="hover:opacity-70 transition-opacity">Our Story</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Catalogs</a></li>
+                <li><a href="#" class="cta-compressed green hover:opacity-70 transition-all">Login</a></li>
+            </ul>
+            <a href="#" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/>
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] bg-evergreen-dark text-sand hidden">
+        <div class="flex justify-between items-center p-6">
+            <span class="body12-caps">Menu</span>
+            <button id="mobileMenuClose">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center justify-center gap-8 pt-16">
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Everyday</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Seasonal</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Home Décor</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Brands</a>
+            <a href="about.html" class="font-century text-3xl hover:opacity-70 transition-opacity">Our Story</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Catalogs</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Sale</a>
+            <div class="mt-8">
+                <a href="#" class="cta-compressed transparent">Login</a>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+
+        <!-- HERO — Left-aligned, matching about page -->
+        <section class="pt-32 md:pt-44 pb-10 md:pb-14 bg-wheat">
+            <div class="mx-auto max-w-content px-6 md:px-10">
+                <p class="body12-caps opacity-40 mb-4 hero-label">Support</p>
+                <h1 class="font-century text-[34px] md:text-[52px] leading-[1.1] heading-editorial max-w-text-wide hero-title">Frequently Asked Questions</h1>
+                <p class="body-editorial mt-4 max-w-md hero-sub">Everything you need to know about ordering, products, and working with CTG Brands.</p>
+            </div>
+        </section>
+
+        <!-- FAQ — Two-column: sticky sidebar + accordion -->
+        <section class="pb-20 md:pb-28 bg-wheat">
+            <div class="mx-auto max-w-content px-6 md:px-10">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
+
+                    <!-- Sidebar — sticky on desktop -->
+                    <div class="md:col-span-4 reveal">
+                        <div class="faq-sidebar">
+                            <p class="body12-caps opacity-40 mb-3">Browse</p>
+                            <h2 class="font-century text-xl md:text-2xl heading-editorial leading-snug mb-6">8 questions &amp; answers about working with CTG</h2>
+                            <p class="body-editorial mb-8">Can't find what you're looking for? Our team is happy to help.</p>
+                            <a href="#" class="cta-compressed green">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Accordion -->
+                    <div class="md:col-span-8 reveal reveal-d1">
+
+                        <!-- Q1 -->
+                        <div class="faq-item">
+                            <button class="faq-question w-full flex items-center justify-between py-7 md:py-8 text-left gap-6" onclick="toggleFaq(this)">
+                                <h3 class="font-century text-base md:text-lg leading-snug">What is the meaning of the dots on the items?</h3>
+                                <span class="faq-icon text-xl leading-none opacity-30">+</span>
+                            </button>
+                            <div class="faq-answer pb-8">
+                                <div class="space-y-3 text-sm md:text-[15px] leading-relaxed opacity-60">
+                                    <div class="flex items-start gap-3">
+                                        <span class="w-2 h-2 rounded-full bg-green-500 mt-2 flex-shrink-0"></span>
+                                        <p><strong class="font-medium opacity-100">Green</strong> &mdash; on current order</p>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <span class="w-2 h-2 rounded-full bg-orange-400 mt-2 flex-shrink-0"></span>
+                                        <p><strong class="font-medium opacity-100">Orange</strong> &mdash; on another open order for that customer</p>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <span class="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0"></span>
+                                        <p><strong class="font-medium opacity-100">Blue</strong> &mdash; customer has ordered in the past but not on an open order</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="faq-item">
+                            <button class="faq-question w-full flex items-center justify-between py-7 md:py-8 text-left gap-6" onclick="toggleFaq(this)">
+                                <h3 class="font-century text-base md:text-lg leading-snug">How do I place an order?</h3>
+                                <span class="faq-icon text-xl leading-none opacity-30">+</span>
+                            </button>
+                            <div class="faq-answer pb-8">
+                                <p class="text-sm md:text-[15px] leading-relaxed opacity-60">Retailers can place orders online on our website or visit one of our three full-scale showrooms. You may also contact your sales rep in your area and place your order directly through them.</p>
+                            </div>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="faq-item">
+                            <button class="faq-question w-full flex items-center justify-between py-7 md:py-8 text-left gap-6" onclick="toggleFaq(this)">
+                                <h3 class="font-century text-base md:text-lg leading-snug">How do I obtain product information and pricing?</h3>
+                                <span class="faq-icon text-xl leading-none opacity-30">+</span>
+                            </button>
+                            <div class="faq-answer pb-8">
+                                <p class="text-sm md:text-[15px] leading-relaxed opacity-60">If you are a business or retailer, please <a href="#" class="underline underline-offset-2 opacity-100 hover:opacity-70 transition-opacity">contact us</a> and we will put you in contact with a sales rep in your area.</p>
+                            </div>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="faq-item">
+                            <button class="faq-question w-full flex items-center justify-between py-7 md:py-8 text-left gap-6" onclick="toggleFaq(this)">
+                                <h3 class="font-century text-base md:text-lg leading-snug">May I order online? How do I find my sales representative?</h3>
+                                <span class="faq-icon text-xl leading-none opacity-30">+</span>
+                            </button>
+                            <div class="faq-answer pb-8">
+                                <div class="space-y-4 text-sm md:text-[15px] leading-relaxed opacity-60">
+                                    <p>Yes, absolutely, for businesses and retailers! If you are an existing customer, <a href="#" class="underline underline-offset-2 opacity-100 hover:opacity-70 transition-opacity">click here to login</a>. If you are a new customer, <a href="#" class="underline underline-offset-2 opacity-100 hover:opacity-70 transition-opacity">click here to register</a> for online access.</p>
+                                    <p>If you are not a retailer and you are having trouble finding one of our products, we will be happy to refer you to a retailer in your area.</p>
+                                    <p>Find your sales representative &mdash; <a href="#" class="underline underline-offset-2 opacity-100 hover:opacity-70 transition-opacity">Please contact us!</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q5 -->
+                        <div class="faq-item">
+                            <button class="faq-question w-full flex items-center justify-between py-7 md:py-8 text-left gap-6" onclick="toggleFaq(this)">
+                                <h3 class="font-century text-base md:text-lg leading-snug">Where can I return a product I purchased or received as a gift?</h3>
+                                <span class="faq-icon text-xl leading-none opacity-30">+</span>
+                            </button>
+                            <div class="faq-answer pb-8">
+                                <p class="text-sm md:text-[15px] leading-relaxed opacity-60">CTG products purchased or received as a gift should be returned to the store from which it was purchased. Returns and exchanges are subject to the store's returns and exchange policy.</p>
+                            </div>
+                        </div>
+
+                        <!-- Q6 -->
+                        <div class="faq-item">
+                            <button class="faq-question w-full flex items-center justify-between py-7 md:py-8 text-left gap-6" onclick="toggleFaq(this)">
+                                <h3 class="font-century text-base md:text-lg leading-snug">Do you sell your products directly to the public?</h3>
+                                <span class="faq-icon text-xl leading-none opacity-30">+</span>
+                            </button>
+                            <div class="faq-answer pb-8">
+                                <p class="text-sm md:text-[15px] leading-relaxed opacity-60">CTG Brands, an importer &amp; distributor, sells directly to registered retailers. If you are a business or retailer, you can <a href="#" class="underline underline-offset-2 opacity-100 hover:opacity-70 transition-opacity">register with us</a> to purchase items.</p>
+                            </div>
+                        </div>
+
+                        <!-- Q7 -->
+                        <div class="faq-item">
+                            <button class="faq-question w-full flex items-center justify-between py-7 md:py-8 text-left gap-6" onclick="toggleFaq(this)">
+                                <h3 class="font-century text-base md:text-lg leading-snug">What brands do you represent?</h3>
+                                <span class="faq-icon text-xl leading-none opacity-30">+</span>
+                            </button>
+                            <div class="faq-answer pb-8">
+                                <p class="text-sm md:text-[15px] leading-relaxed opacity-60">CTG Brands has over 60 exclusive brands. Some of these are: BODICO, Canadian Souvenir, Country Garden, Deco-No&euml;l, Deco-Lite, Easter Treasures, From the Heart, FabDesign, iDesignGraphics, Ghostly Ghouls, iFocus Electronics, Home Essentials, Luciano Gourmet, Luciano Houseware, NordicTrail, OfficeWorks, PaperTrendz, Paws, Rain-Guard, PURE, Santa's Secrets, Sunny Dayz, Time 4 Crafts, Tootsie Baby and Woody's Stickers.</p>
+                            </div>
+                        </div>
+
+                        <!-- Q8 -->
+                        <div class="faq-item">
+                            <button class="faq-question w-full flex items-center justify-between py-7 md:py-8 text-left gap-6" onclick="toggleFaq(this)">
+                                <h3 class="font-century text-base md:text-lg leading-snug">Which stores carry your products?</h3>
+                                <span class="faq-icon text-xl leading-none opacity-30">+</span>
+                            </button>
+                            <div class="faq-answer pb-8">
+                                <p class="text-sm md:text-[15px] leading-relaxed opacity-60">Our products are offered in thousands of stores throughout North America. If you are having trouble finding one of our items, we will be happy to refer you to a retailer in your area.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA — Matching about page style -->
+        <section class="py-20 md:py-24 bg-white text-evergreen-dark">
+            <div class="mx-auto max-w-content px-6 md:px-10 text-center reveal">
+                <p class="body12-caps mb-4 opacity-40">Still have questions?</p>
+                <h2 class="font-century text-[24px] md:text-[36px] leading-tight heading-editorial mb-5 max-w-text-wide mx-auto">We're here to help. Reach out to our team and we'll get back to you promptly.</h2>
+                <a href="#" class="cta-compressed green">Contact Us</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-evergreen text-sand pt-14 pb-10">
+        <div class="container mx-auto px-6 md:px-10 max-w-grid flex justify-center mb-10">
+            <a href="index.html">
+                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands" class="h-10 w-auto footer-logo brightness-0 invert">
+            </a>
+        </div>
+        <div class="container mx-auto px-6 md:px-10 mb-12 flex flex-col md:flex-row items-center justify-center gap-8 max-w-grid">
+            <p class="font-century text-xl md:text-2xl max-w-[500px] text-center md:text-left">Sign up for our eblasts and be the first to know about new products and special promotions</p>
+            <form class="w-full max-w-[420px] flex border border-sand/40 p-3 rounded-4">
+                <input type="email" placeholder="Enter your email to subscribe" class="bg-transparent border-none outline-none flex-1 placeholder-sand/60 text-sand text-sm">
+                <button type="submit" class="body12-caps ml-4 hover:opacity-70 transition-opacity">Subscribe</button>
+            </form>
+        </div>
+        <div class="border-t border-sand/20 pt-10">
+            <div class="container mx-auto px-6 md:px-10 max-w-grid">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
+                    <div>
+                        <h4 class="body12-caps mb-6 opacity-60">General</h4>
+                        <ul class="space-y-3">
+                            <li><a href="about.html" class="font-light text-sm hover:opacity-70 transition-opacity">Our Story</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">New Releases</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Contact</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Terms of Use</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Privacy Policy</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Accessibility</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="body12-caps mb-6 opacity-60">Featured</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Everyday</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Seasonal</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Home Décor</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Brands</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">News</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="body12-caps mb-6 opacity-60">Resources</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">New Customers & Forms</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Become a Supplier</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Careers</a></li>
+                            <li><a href="faq.html" class="font-light text-sm hover:opacity-70 transition-opacity opacity-100 font-normal">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="body12-caps mb-6 opacity-60">Connect</h4>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-white/10 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-white/10 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.83-48.3 93.96 0 111.28 61.9 111.28 142.3V448z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-white/10 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.6-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-white/10 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-sand/20 pt-8 text-center">
+                    <p class="text-xs opacity-50">&copy; CTG Brands Inc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <div id="scrollToTop" class="scroll-to-top">
+        <a href="#" onclick="scrollToTop();return false;" class="bg-white/95 shadow-lg rounded-full w-12 h-12 flex items-center justify-center text-evergreen-dark hover:shadow-xl transition-shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // FAQ accordion
+        function toggleFaq(button) {
+            const item = button.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(function(el) {
+                el.classList.remove('open');
+            });
+            if (!isOpen) {
+                item.classList.add('open');
+            }
+        }
+
+        // Mobile menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        document.getElementById('mobileMenuClose').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+
+        // Scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('scrollToTop');
+            if (btn) {
+                if (window.pageYOffset > 300) {
+                    btn.classList.add('show');
+                } else {
+                    btn.classList.remove('show');
+                }
+            }
+        });
+
+        // Scroll reveal (Intersection Observer)
+        document.addEventListener('DOMContentLoaded', function() {
+            var revealEls = document.querySelectorAll('.reveal');
+            if (revealEls.length > 0 && 'IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('revealed');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+                revealEls.forEach(function(el) { observer.observe(el); });
+            }
+        });
+    </script>
+
+</body>
+</html>

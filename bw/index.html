@@ -175,6 +175,107 @@
         .header-scrolled .logo-light { display: none; }
         .header-scrolled .logo-dark { display: block !important; }
 
+        /* ── Design Enhancements ── */
+
+        /* Keyframes */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Hero staggered entrance */
+        .hero-label { animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both; }
+        .hero-title { animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both; }
+        .hero-cta   { animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both; }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            animation: scrollPulse 2.5s ease-in-out infinite;
+        }
+        @keyframes scrollPulse {
+            0%, 100% { transform: translateY(0); opacity: 0.5; }
+            50% { transform: translateY(8px); opacity: 1; }
+        }
+
+        /* Refined CTA hovers */
+        .cta-compressed.green:hover {
+            background-color: #141414;
+            color: #f5f5f5;
+            border-color: #141414;
+            opacity: 1;
+        }
+        .cta-compressed.transparent:hover {
+            background-color: rgba(255,255,255,0.12);
+            opacity: 1;
+        }
+        .cta-compressed.dark:hover {
+            background-color: #333;
+            opacity: 1;
+        }
+
+        /* Scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-d1 { transition-delay: 0.1s; }
+        .reveal-d2 { transition-delay: 0.2s; }
+        .reveal-d3 { transition-delay: 0.3s; }
+
+        /* Mobile menu refined animation */
+        #mobileMenu {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease;
+        }
+        #mobileMenu:not(.hidden) {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        #mobileMenu nav a,
+        #mobileMenu nav > div {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        #mobileMenu:not(.hidden) nav a,
+        #mobileMenu:not(.hidden) nav > div {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #mobileMenu:not(.hidden) nav a:nth-child(1) { transition-delay: 0.06s; }
+        #mobileMenu:not(.hidden) nav a:nth-child(2) { transition-delay: 0.10s; }
+        #mobileMenu:not(.hidden) nav a:nth-child(3) { transition-delay: 0.14s; }
+        #mobileMenu:not(.hidden) nav a:nth-child(4) { transition-delay: 0.18s; }
+        #mobileMenu:not(.hidden) nav a:nth-child(5) { transition-delay: 0.22s; }
+        #mobileMenu:not(.hidden) nav a:nth-child(6) { transition-delay: 0.26s; }
+        #mobileMenu:not(.hidden) nav a:nth-child(7) { transition-delay: 0.30s; }
+        #mobileMenu:not(.hidden) nav > div { transition-delay: 0.38s; }
+
+        /* Footer logo */
+        .footer-logo {
+            opacity: 0.15;
+            transition: opacity 0.3s ease;
+        }
+        .footer-logo:hover {
+            opacity: 0.3;
+        }
+
+        /* Section divider line */
+        .section-divider {
+            width: 48px;
+            height: 1px;
+            background: currentColor;
+            opacity: 0.15;
+            margin: 0 auto;
+        }
+
     </style>
 </head>
 <body class="bg-wheat text-evergreen-dark antialiased">
@@ -198,14 +299,14 @@
             </ul>
 
             <!-- Logo -->
-            <a href="#" class="flex-shrink-0 mx-auto">
+            <a href="index.html" class="flex-shrink-0 mx-auto">
                 <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands logo" class="h-10 md:h-12 w-auto logo-light brightness-0 invert" />
                 <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands logo" class="h-10 md:h-12 w-auto logo-dark hidden" />
             </a>
 
             <!-- Right nav -->
             <ul class="hidden md:flex flex-1 justify-end body12-caps gap-8 items-center">
-                <li><a href="#" class="hover:opacity-70 transition-opacity">Our Story</a></li>
+                <li><a href="about.html" class="hover:opacity-70 transition-opacity">Our Story</a></li>
                 <li><a href="#" class="hover:opacity-70 transition-opacity">Catalogs</a></li>
                 <li><a href="#" class="cta-compressed transparent hover:bg-white/20 transition-all">Login</a></li>
             </ul>
@@ -234,7 +335,7 @@
             <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Seasonal</a>
             <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Home Décor</a>
             <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Brands</a>
-            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Our Story</a>
+            <a href="about.html" class="font-century text-3xl hover:opacity-70 transition-opacity">Our Story</a>
             <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Catalogs</a>
             <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Sale</a>
             <div class="mt-8">
@@ -252,18 +353,25 @@
             </div>
             <div class="container relative z-10 mx-auto px-6 md:px-10 py-16 md:py-20 flex flex-col md:flex-row justify-between items-end w-full max-w-grid">
                 <div class="flex flex-col max-w-text-wide text-sand mb-12 md:mb-0">
-                    <h3 class="body12-caps mb-4">Your Partner in Product Solutions</h3>
-                    <h1 class="font-century text-[32px] md:text-[52px] leading-tight mb-6">One destination.<br>Endless wholesale possibilities.</h1>
-                    <div>
+                    <h3 class="body12-caps mb-4 hero-label">Your Partner in Product Solutions</h3>
+                    <h1 class="font-century text-[32px] md:text-[52px] leading-tight mb-6 hero-title">One destination.<br>Endless wholesale possibilities.</h1>
+                    <div class="hero-cta">
                         <a href="#" class="cta-compressed transparent">Become our customer</a>
                     </div>
+                </div>
+                <!-- Scroll indicator -->
+                <div class="hidden md:flex flex-col items-center text-sand scroll-indicator self-end mb-4">
+                    <span class="body12-caps text-[10px] tracking-widest mb-2 opacity-60">Scroll</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" fill="none" viewBox="0 0 16 24" stroke="currentColor" stroke-width="1.5" class="opacity-60">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 4v16m0 0l-4-4m4 4l4-4"/>
+                    </svg>
                 </div>
             </div>
         </section>
 
         <!-- TRENDING CATEGORIES -->
         <section class="py-20 md:py-28 text-evergreen-dark bg-white">
-            <div class="container mx-auto px-6 text-center max-w-text-wide mb-14 md:mb-20">
+            <div class="container mx-auto px-6 text-center max-w-text-wide mb-14 md:mb-20 reveal">
                 <h3 class="body12-caps mb-4">Trending Categories</h3>
                 <h2 class="font-century text-[24px] md:text-[32px] leading-tight mb-8">Seasonal must-haves and everyday essentials, thoughtfully curated for every retail moment.</h2>
                 <a href="#" class="cta-compressed green">Explore collections</a>
@@ -296,7 +404,7 @@
         <!-- HOME DECOR + PARTNER (unified dark section) -->
         <section class="bg-evergreen-dark text-sand py-20 md:py-28">
             <!-- Home Décor -->
-            <div class="container mx-auto px-6 text-center max-w-text-wide mb-14 md:mb-20">
+            <div class="container mx-auto px-6 text-center max-w-text-wide mb-14 md:mb-20 reveal">
                 <h3 class="body12-caps mb-4">Home Décor</h3>
                 <h2 class="font-century text-3xl md:text-4xl">Beautiful spaces start with thoughtful details</h2>
             </div>
@@ -337,7 +445,7 @@
             </div>
 
             <!-- Become a Partner banner -->
-            <div class="container mx-auto px-6 md:px-10 max-w-grid mt-20 md:mt-28">
+            <div class="container mx-auto px-6 md:px-10 max-w-grid mt-20 md:mt-28 reveal">
                 <div class="bg-evergreen rounded-4 p-8 md:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                     <div class="md:col-span-6 order-2 md:order-1">
                         <h2 class="font-century text-xl md:text-2xl leading-snug">We bring years of wholesale expertise together with a hands-on, partner-first approach. From sourcing to fulfillment, we deliver clarity, speed, and market insight at every stage.</h2>
@@ -355,7 +463,7 @@
         <!-- TRENDING BRANDS -->
         <section class="py-20 md:py-28 bg-white text-evergreen-dark">
             <div class="container mx-auto px-6 md:px-10 max-w-grid">
-                <div class="text-center mb-14 md:mb-20">
+                <div class="text-center mb-14 md:mb-20 reveal">
                     <h3 class="body12-caps mb-4">Trending Brands</h3>
                     <h2 class="font-century text-[28px] md:text-[36px] leading-tight mx-auto max-w-text-wide">Brands your customers already love.</h2>
                 </div>
@@ -386,7 +494,7 @@
         <!-- OUR BRANDS CAROUSEL -->
         <section class="py-14 md:py-20 bg-evergreen-dark text-sand">
             <div class="container mx-auto px-6 md:px-10 max-w-grid">
-                <div class="text-center mb-10">
+                <div class="text-center mb-10 reveal">
                     <h2 class="font-century text-3xl md:text-4xl">Our Brands</h2>
                 </div>
 
@@ -549,7 +657,7 @@
 
         <!-- CTA BANNER -->
         <section class="py-20 md:py-24 bg-white text-evergreen-dark">
-            <div class="container mx-auto px-6 text-center max-w-text-wide">
+            <div class="container mx-auto px-6 text-center max-w-text-wide reveal">
                 <h3 class="body12-caps mb-4">Get Started</h3>
                 <h2 class="font-century text-[24px] md:text-[36px] leading-tight mb-5">Create your account today and connect with one of our sales experts.</h2>
                 <p class="font-light text-base md:text-lg mb-8 opacity-80 leading-relaxed">With a strong track record across North America and a focus on long-term relationships, we don't just supply products — we support sustainable growth, season after season.</p>
@@ -560,6 +668,12 @@
 
     <!-- FOOTER -->
     <footer class="bg-evergreen text-sand pt-14 pb-10">
+        <!-- Footer Logo -->
+        <div class="container mx-auto px-6 md:px-10 max-w-grid flex justify-center mb-10">
+            <a href="index.html">
+                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands" class="h-10 w-auto footer-logo brightness-0 invert">
+            </a>
+        </div>
         <!-- Newsletter -->
         <div class="container mx-auto px-6 md:px-10 mb-12 flex flex-col md:flex-row items-center justify-center gap-8 max-w-grid">
             <p class="font-century text-xl md:text-2xl max-w-[500px] text-center md:text-left">Sign up for our eblasts and be the first to know about new products and special promotions</p>
@@ -577,6 +691,7 @@
                     <div>
                         <h4 class="body12-caps mb-6 opacity-60">General</h4>
                         <ul class="space-y-3">
+                            <li><a href="about.html" class="font-light text-sm hover:opacity-70 transition-opacity">Our Story</a></li>
                             <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">New Releases</a></li>
                             <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Contact</a></li>
                             <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Terms of Use</a></li>
@@ -602,7 +717,7 @@
                             <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">New Customers & Forms</a></li>
                             <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Become a Supplier</a></li>
                             <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Careers</a></li>
-                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">FAQ</a></li>
+                            <li><a href="faq.html" class="font-light text-sm hover:opacity-70 transition-opacity">FAQ</a></li>
                         </ul>
                     </div>
                     <!-- Col 4 - Social -->
@@ -711,6 +826,22 @@
                 } else {
                     btn.classList.remove('show');
                 }
+            }
+        });
+
+        // Scroll reveal (Intersection Observer)
+        document.addEventListener('DOMContentLoaded', function() {
+            var revealEls = document.querySelectorAll('.reveal');
+            if (revealEls.length > 0 && 'IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('revealed');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+                revealEls.forEach(function(el) { observer.observe(el); });
             }
         });
     </script>

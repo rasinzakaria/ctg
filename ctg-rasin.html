@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CTG Brands is a Canadian importer and distributor of consumer-packaged products geared to the North American retail industry.">
+    <title>Home - CTG Brands Inc - Your Partner in Product Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'wheat': '#f4efeb',
+                        'evergreen': '#00473f',
+                        'evergreen-dark': '#00251e',
+                        'sand': '#f4efeb',
+                        'clay': '#b18878'
+                    },
+                    fontFamily: {
+                        'century': ['"century-old-style-std"', 'Georgia', '"Times New Roman"', 'serif'],
+                        'sentinel': ['Sentinel', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    maxWidth: {
+                        'bleed': '2500px',
+                        'grid': '2000px',
+                        'text-wide': '665px',
+                        'text-narrow': '460px',
+                    },
+                    borderRadius: {
+                        '4': '4px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url("https://use.typekit.net/zwn8qqz.css");
+
+        body {
+            font-family: "sentinel-a", "sentinel-b", Georgia, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .font-century {
+            font-family: "century-old-style-std", serif;
+        }
+
+        .body12-caps {
+            font-size: 12px;
+            line-height: 170%;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+        }
+
+        .cta-compressed {
+            display: inline-block;
+            border: 1px solid currentColor;
+            border-radius: 100px;
+            padding: 8px 24px;
+            font-size: 14px;
+            font-style: italic;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .cta-compressed:hover {
+            opacity: 0.7;
+        }
+
+        .cta-compressed.green {
+            border-color: #00251e;
+            color: #00251e;
+        }
+
+        .cta-compressed.transparent {
+            border-color: #f4efeb;
+            color: #f4efeb;
+        }
+
+        .cta-compressed.dark {
+            border-color: #00251e;
+            color: #f4efeb;
+            background-color: #00251e;
+        }
+
+        .cta-compressed.dark:hover {
+            background-color: #00473f;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Announcement banner */
+        .announcement-bar {
+            position: fixed;
+            bottom: 1em;
+            left: 2em;
+            right: 2em;
+            z-index: 999;
+            border-radius: 4px;
+            box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+                0 2px 2px hsl(0deg 0% 0% / 0.075),
+                0 4px 4px hsl(0deg 0% 0% / 0.075),
+                0 8px 8px hsl(0deg 0% 0% / 0.075),
+                0 16px 16px hsl(0deg 0% 0% / 0.075);
+        }
+
+        /* Scroll to top */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 5em;
+            right: 2em;
+            z-index: 1000;
+            display: none;
+            transition: opacity 0.3s ease;
+        }
+        .scroll-to-top.show {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Overlay card hover */
+        .overlay-card-hover {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        .overlay-card-hover:hover {
+            transform: translateY(-4px);
+        }
+        .overlay-card-hover:hover img {
+            transform: scale(1.03);
+        }
+        .overlay-card-hover img {
+            transition: transform 0.7s ease;
+        }
+
+        /* Featured overlay */
+        .featured-hover:hover .featured-img {
+            transform: scale(1.03);
+        }
+        .featured-img {
+            transition: transform 0.7s ease;
+        }
+
+        /* Carousel */
+        .carousel-track {
+            display: flex;
+            gap: 30px;
+            transition: transform 0.5s ease;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        /* Header scroll state */
+        .header-scrolled {
+            background-color: rgba(244, 239, 235, 0.97) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .header-scrolled nav {
+            color: #00251e !important;
+        }
+        .header-scrolled .cta-compressed.transparent {
+            border-color: #00251e;
+            color: #00251e;
+        }
+        .header-scrolled .logo-light { display: none; }
+        .header-scrolled .logo-dark { display: block !important; }
+    </style>
+</head>
+<body class="bg-wheat text-evergreen-dark antialiased">
+
+    <!-- HEADER -->
+    <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 py-4 md:pt-8 md:pb-4">
+        <nav class="relative mx-auto flex items-center justify-between px-6 md:px-10 max-w-grid text-sand">
+            <!-- Mobile menu button -->
+            <button id="mobileMenuBtn" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+
+            <!-- Left nav -->
+            <ul class="hidden md:flex flex-1 justify-start body12-caps gap-8 items-center">
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Everyday</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Seasonal</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Home Décor</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Brands</a></li>
+            </ul>
+
+            <!-- Logo -->
+            <a href="#" class="flex-shrink-0 mx-auto">
+                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands logo" class="h-10 md:h-12 w-auto logo-light brightness-0 invert" />
+                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands logo" class="h-10 md:h-12 w-auto logo-dark hidden" />
+            </a>
+
+            <!-- Right nav -->
+            <ul class="hidden md:flex flex-1 justify-end body12-caps gap-8 items-center">
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Our Story</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Catalogs</a></li>
+                <li><a href="#" class="cta-compressed transparent hover:bg-white/20 transition-all">Login</a></li>
+            </ul>
+
+            <!-- Mobile cart icon -->
+            <a href="#" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/>
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] bg-evergreen-dark text-sand hidden">
+        <div class="flex justify-between items-center p-6">
+            <span class="body12-caps">Menu</span>
+            <button id="mobileMenuClose">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center justify-center gap-8 pt-16">
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Everyday</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Seasonal</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Home Décor</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Brands</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Our Story</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Catalogs</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Sale</a>
+            <div class="mt-8">
+                <a href="#" class="cta-compressed transparent">Login</a>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="relative min-h-[100vh] flex items-end">
+            <div class="absolute inset-0 z-0">
+                <img src="https://www.ctgbrands.com/media/1467/home-page-banner-2.png" class="w-full h-full object-cover object-center" alt="CTG Brands Hero">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent"></div>
+            </div>
+            <div class="container relative z-10 mx-auto px-6 md:px-10 py-16 md:py-20 flex flex-col md:flex-row justify-between items-end w-full max-w-grid">
+                <div class="flex flex-col max-w-text-wide text-sand mb-12 md:mb-0">
+                    <h3 class="body12-caps mb-4">Your Partner in Product Solutions</h3>
+                    <h1 class="font-century text-[32px] md:text-[52px] leading-tight mb-6">One destination.<br>Endless wholesale possibilities.</h1>
+                    <div>
+                        <a href="#" class="cta-compressed transparent">Become our customer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRENDING CATEGORIES INTRO -->
+        <section class="py-20 md:py-28 text-evergreen-dark bg-white">
+            <div class="container mx-auto px-6 text-center max-w-text-wide">
+                <h3 class="body12-caps mb-4">Trending Categories</h3>
+                <h2 class="font-century text-[24px] md:text-[32px] leading-tight mb-8">Seasonal must-haves and everyday essentials, thoughtfully curated for every retail moment.</h2>
+                <a href="#" class="cta-compressed green">Explore collections</a>
+            </div>
+        </section>
+
+        <!-- TRENDING CATEGORIES CARDS -->
+        <section class="pb-20 md:pb-28 bg-white">
+            <div class="container mx-auto px-6 md:px-10 max-w-grid">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    <!-- Seasonal -->
+                    <a href="#" class="group block overlay-card-hover">
+                        <div class="aspect-[4/3] overflow-hidden rounded-4 mb-6">
+                            <img src="https://www.ctgbrands.com/media/1470/seasonal-9.png" class="w-full h-full object-cover" alt="Seasonal Collection">
+                        </div>
+                        <h3 class="font-century text-2xl md:text-3xl mb-2">Seasonal Collection</h3>
+                        <p class="font-light text-sm md:text-base opacity-80 mb-3 max-w-md">Seasonal must-haves, designed for every key holiday moment.</p>
+                        <span class="body12-caps opacity-60 group-hover:opacity-100 transition-opacity">Shop Seasonal →</span>
+                    </a>
+                    <!-- Everyday -->
+                    <a href="#" class="group block overlay-card-hover">
+                        <div class="aspect-[4/3] overflow-hidden rounded-4 mb-6">
+                            <img src="https://www.ctgbrands.com/media/1469/everyday-9.png" class="w-full h-full object-cover" alt="Everyday Collection">
+                        </div>
+                        <h3 class="font-century text-2xl md:text-3xl mb-2">Everyday Collection</h3>
+                        <p class="font-light text-sm md:text-base opacity-80 mb-3 max-w-md">Core essentials, thoughtfully curated for everyday demand.</p>
+                        <span class="body12-caps opacity-60 group-hover:opacity-100 transition-opacity">Shop Collection →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOME DECOR -->
+        <section class="relative py-20 md:py-32 bg-wheat">
+            <div class="container mx-auto px-6 md:px-10 max-w-grid">
+                <div class="text-center mb-16">
+                    <h3 class="body12-caps mb-4">Home Décor</h3>
+                    <h2 class="font-century text-[28px] md:text-[36px] leading-tight mx-auto max-w-text-wide">Beautiful spaces start with thoughtful details.</h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Kiera Grace -->
+                    <a href="#" class="group block">
+                        <div class="aspect-[3/4] overflow-hidden rounded-4 mb-6 relative">
+                            <img src="https://www.ctgbrands.com/media/1474/kiera-grace.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Kiera Grace">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6 text-sand">
+                                <h3 class="font-century text-2xl mb-2">Kiera Grace</h3>
+                                <span class="body12-caps opacity-80">Explore Brand →</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Truu Design -->
+                    <a href="#" class="group block">
+                        <div class="aspect-[3/4] overflow-hidden rounded-4 mb-6 relative">
+                            <img src="https://www.ctgbrands.com/media/1475/truu-design.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Truu Design">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6 text-sand">
+                                <h3 class="font-century text-2xl mb-2">Truu Design</h3>
+                                <span class="body12-caps opacity-80">Explore Brand →</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Enlighten -->
+                    <a href="#" class="group block">
+                        <div class="aspect-[3/4] overflow-hidden rounded-4 mb-6 relative">
+                            <img src="https://www.ctgbrands.com/media/1468/enlighten-samples-7-1.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Enlighten">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6 text-sand">
+                                <h3 class="font-century text-2xl mb-2">Enlighten</h3>
+                                <span class="body12-caps opacity-80">Explore Brand →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BECOME A PARTNER -->
+        <section class="relative min-h-[500px] md:min-h-[700px] flex items-center justify-center">
+            <div class="absolute inset-0">
+                <img src="https://www.ctgbrands.com/media/1467/home-page-banner-2.png" class="w-full h-full object-cover" alt="Partnership" style="object-position: center 30%;">
+                <div class="absolute inset-0 bg-black/50"></div>
+            </div>
+            <div class="relative z-10 text-center text-sand px-6 max-w-text-wide">
+                <h3 class="body12-caps mb-4">Partnership</h3>
+                <h2 class="font-century text-3xl md:text-5xl mb-6">Become a CTG Partner</h2>
+                <p class="font-light text-base md:text-lg mb-8 leading-relaxed opacity-90">We bring years of wholesale expertise together with a hands-on, partner-first approach — working as an extension of your team. From sourcing to fulfillment, we deliver clarity, speed, and market insight at every stage.</p>
+                <a href="#" class="cta-compressed transparent">Sign up now</a>
+            </div>
+        </section>
+
+        <!-- TRENDING BRANDS -->
+        <section class="py-20 md:py-28 bg-white text-evergreen-dark">
+            <div class="container mx-auto px-6 md:px-10 max-w-grid">
+                <div class="text-center mb-16">
+                    <h3 class="body12-caps mb-4">Trending Brands</h3>
+                    <h2 class="font-century text-[28px] md:text-[36px] leading-tight mx-auto max-w-text-wide">Brands your customers already love.</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    <!-- Luciano -->
+                    <a href="#" class="group block overlay-card-hover">
+                        <div class="aspect-[4/3] overflow-hidden rounded-4 mb-6">
+                            <img src="https://www.ctgbrands.com/media/1472/luciano-9.png" class="w-full h-full object-cover" alt="Luciano">
+                        </div>
+                        <h3 class="font-century text-2xl md:text-3xl mb-2">Luciano</h3>
+                        <p class="font-light text-sm md:text-base opacity-80 mb-3 max-w-md">Premium kitchen essentials, made to last.</p>
+                        <span class="body12-caps opacity-60 group-hover:opacity-100 transition-opacity">Shop Now →</span>
+                    </a>
+                    <!-- Bodico -->
+                    <a href="#" class="group block overlay-card-hover">
+                        <div class="aspect-[4/3] overflow-hidden rounded-4 mb-6">
+                            <img src="https://www.ctgbrands.com/media/1471/bodico-9.png" class="w-full h-full object-cover" alt="Bodico">
+                        </div>
+                        <h3 class="font-century text-2xl md:text-3xl mb-2">Bodico</h3>
+                        <p class="font-light text-sm md:text-base opacity-80 mb-3 max-w-md">Everyday bathroom essentials, done better.</p>
+                        <span class="body12-caps opacity-60 group-hover:opacity-100 transition-opacity">Shop Now →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR BRANDS CAROUSEL -->
+        <section class="py-16 md:py-24 bg-evergreen-dark text-sand">
+            <div class="container mx-auto px-6 md:px-10 max-w-grid">
+                <div class="text-center mb-12">
+                    <h2 class="font-century text-3xl md:text-4xl">Our Brands</h2>
+                </div>
+
+                <div class="relative">
+                    <div class="overflow-hidden" id="brandsCarousel">
+                        <div class="carousel-track" id="carouselTrack">
+                            <div class="flex-shrink-0 w-[140px] h-[80px] flex items-center justify-center bg-white/10 rounded-4 p-4">
+                                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTI1Ni8yLWJldHRlci1iYnEtMDkxNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3513=/media/1256/2-better-bbq-0914.png" alt="Better BBQs" class="max-w-full max-h-full object-contain brightness-0 invert opacity-80">
+                            </div>
+                            <div class="flex-shrink-0 w-[140px] h-[80px] flex items-center justify-center bg-white/10 rounded-4 p-4">
+                                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTIyNS8zLTFib2RpY28tMDgyNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3471=/media/1225/3-1bodico-0827.png" alt="Bodico" class="max-w-full max-h-full object-contain brightness-0 invert opacity-80">
+                            </div>
+                            <div class="flex-shrink-0 w-[140px] h-[80px] flex items-center justify-center bg-white/10 rounded-4 p-4">
+                                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTE4OC80LWNhbXBpbmctdG0tMDgyNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3428=/media/1188/4-camping-tm-0826.png" alt="Camping Essentials" class="max-w-full max-h-full object-contain brightness-0 invert opacity-80">
+                            </div>
+                            <div class="flex-shrink-0 w-[140px] h-[80px] flex items-center justify-center bg-white/10 rounded-4 p-4">
+                                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTIwNS8yMS1raWRzLWtyYWZ0LTA4MjYucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3445=/media/1205/21-kids-kraft-0826.png" alt="Kids Kraft" class="max-w-full max-h-full object-contain brightness-0 invert opacity-80">
+                            </div>
+                            <div class="flex-shrink-0 w-[140px] h-[80px] flex items-center justify-center bg-white/10 rounded-4 p-4">
+                                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTIyOC8yMi0xa2llcmEtZ3JhY2UtMDgyNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3474=/media/1228/22-1kiera-grace-0827.png" alt="Kiera Grace" class="max-w-full max-h-full object-contain brightness-0 invert opacity-80">
+                            </div>
+                            <div class="flex-shrink-0 w-[140px] h-[80px] flex items-center justify-center bg-white/10 rounded-4 p-4">
+                                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTIwNy8yMy1sZXRzLXBhcnR5MDgyNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3447=/media/1207/23-lets-party0826.png" alt="Let's Party" class="max-w-full max-h-full object-contain brightness-0 invert opacity-80">
+                            </div>
+                            <div class="flex-shrink-0 w-[140px] h-[80px] flex items-center justify-center bg-white/10 rounded-4 p-4">
+                                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTIwNC8yMC1pLWZvY3VzLTA4MjYucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3444=/media/1204/20-i-focus-0826.png" alt="iFocus" class="max-w-full max-h-full object-contain brightness-0 invert opacity-80">
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="moveCarousel(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center text-sand hover:bg-white/10 transition-colors text-xl">‹</button>
+                    <button onclick="moveCarousel(1)" class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center text-sand hover:bg-white/10 transition-colors text-xl">›</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED IMAGES -->
+        <section class="bg-wheat">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <!-- True North -->
+                <a href="#" class="group relative block overflow-hidden featured-hover">
+                    <div class="aspect-[4/3] md:aspect-auto md:h-[500px] lg:h-[600px] overflow-hidden">
+                        <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTQ0MS9hdWd1c3Qtc29jaWFsLW1lZGlhLTEzLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJjb3ZlciJ9fX0=?3774=/media/1441/august-social-media-13.jpg" alt="True North" class="w-full h-full object-cover featured-img">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 right-8 text-sand">
+                        <h3 class="font-century text-2xl md:text-3xl mb-3">True North</h3>
+                        <span class="cta-compressed transparent text-sm">Shop Now</span>
+                    </div>
+                </a>
+                <!-- Easter -->
+                <a href="#" class="group relative block overflow-hidden featured-hover">
+                    <div class="aspect-[4/3] md:aspect-auto md:h-[500px] lg:h-[600px] overflow-hidden">
+                        <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTM4My8xMDAtcGxhLWJpb2RlZ3JhbmRhYmxlLXN0cmF3cy0yMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3691=/media/1383/100-pla-biodegrandable-straws-20.png" alt="Easter" class="w-full h-full object-cover featured-img">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 right-8 text-sand">
+                        <h3 class="font-century text-2xl md:text-3xl mb-1">Easter</h3>
+                        <p class="font-light text-sm mb-3 opacity-90">Spring Has Officially Sprung</p>
+                        <span class="cta-compressed transparent text-sm">Shop Now</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- CTA BANNER -->
+        <section class="py-20 md:py-28 bg-white text-evergreen-dark">
+            <div class="container mx-auto px-6 text-center max-w-text-wide">
+                <h3 class="body12-caps mb-4">Get Started</h3>
+                <h2 class="font-century text-[24px] md:text-[36px] leading-tight mb-6">Create your account today and connect with one of our sales experts.</h2>
+                <p class="font-light text-base md:text-lg mb-8 opacity-80 leading-relaxed">With a strong track record across North America and a focus on long-term relationships, we don't just supply products — we support sustainable growth, season after season.</p>
+                <a href="#" class="cta-compressed green">Sign Up Now</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-evergreen text-sand pt-16 pb-10">
+        <!-- Newsletter -->
+        <div class="container mx-auto px-6 md:px-10 mb-16 flex flex-col md:flex-row items-center justify-center gap-10 max-w-grid">
+            <p class="font-century text-xl md:text-2xl max-w-[500px] text-center md:text-left">Sign up for our eblasts and be the first to know about new products and special promotions</p>
+            <form class="w-full max-w-[420px] flex border border-sand/40 p-3 rounded-4">
+                <input type="email" placeholder="Enter your email to subscribe" class="bg-transparent border-none outline-none flex-1 placeholder-sand/60 text-sand text-sm">
+                <button type="submit" class="body12-caps ml-4 hover:opacity-70 transition-opacity">Subscribe</button>
+            </form>
+        </div>
+
+        <!-- Footer Nav -->
+        <div class="border-t border-sand/20 pt-12">
+            <div class="container mx-auto px-6 md:px-10 max-w-grid">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-16">
+                    <!-- Col 1 -->
+                    <div>
+                        <h4 class="body12-caps mb-6 opacity-60">General</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">New Releases</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Contact</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Terms of Use</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Privacy Policy</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Accessibility</a></li>
+                        </ul>
+                    </div>
+                    <!-- Col 2 -->
+                    <div>
+                        <h4 class="body12-caps mb-6 opacity-60">Featured</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Everyday</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Seasonal</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Home Décor</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Brands</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">News</a></li>
+                        </ul>
+                    </div>
+                    <!-- Col 3 -->
+                    <div>
+                        <h4 class="body12-caps mb-6 opacity-60">Resources</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">New Customers & Forms</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Become a Supplier</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Careers</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <!-- Col 4 - Social -->
+                    <div>
+                        <h4 class="body12-caps mb-6 opacity-60">Connect</h4>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-white/10 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-white/10 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.83-48.3 93.96 0 111.28 61.9 111.28 142.3V448z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-white/10 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.6-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-white/10 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom bar -->
+                <div class="border-t border-sand/20 pt-8 text-center">
+                    <p class="text-xs opacity-50">© CTG Brands Inc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ANNOUNCEMENT BANNER -->
+    <div class="announcement-bar bg-evergreen-dark text-sand py-3 px-4 text-center" id="announcementBanner">
+        <button onclick="closeBanner()" class="absolute right-4 top-1/2 -translate-y-1/2 body12-caps opacity-70 hover:opacity-100 transition-opacity">✕</button>
+        <a href="#" class="body12-caps hover:opacity-70 transition-opacity">Contact your sales rep today to book your January Open House appointment!</a>
+    </div>
+
+    <!-- SCROLL TO TOP -->
+    <div id="scrollToTop" class="scroll-to-top">
+        <a href="#" onclick="scrollToTop();return false;" class="bg-white/95 shadow-lg rounded-full w-12 h-12 flex items-center justify-center text-evergreen-dark hover:shadow-xl transition-shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Mobile menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        document.getElementById('mobileMenuClose').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+
+        // Announcement banner
+        function closeBanner() {
+            const banner = document.getElementById('announcementBanner');
+            if (banner) {
+                banner.style.display = 'none';
+                localStorage.setItem('announcementBannerClosed', 'true');
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.getItem('announcementBannerClosed') === 'true') {
+                const banner = document.getElementById('announcementBanner');
+                if (banner) banner.style.display = 'none';
+            }
+        });
+
+        // Brands carousel
+        let carouselPosition = 0;
+        const carouselTrack = document.getElementById('carouselTrack');
+        const brandLogos = carouselTrack ? carouselTrack.children : [];
+
+        function moveCarousel(direction) {
+            if (!carouselTrack || brandLogos.length === 0) return;
+            const logoWidth = brandLogos[0].offsetWidth + 30;
+            const maxPosition = Math.max(0, (brandLogos.length - 4) * logoWidth);
+            carouselPosition += direction * logoWidth * 2;
+            carouselPosition = Math.max(0, Math.min(carouselPosition, maxPosition));
+            carouselTrack.style.transform = `translateX(-${carouselPosition}px)`;
+        }
+
+        // Scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('scrollToTop');
+            if (btn) {
+                if (window.pageYOffset > 300) {
+                    btn.classList.add('show');
+                } else {
+                    btn.classList.remove('show');
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

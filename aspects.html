@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Home to Reconnect With What Matters | Aspects Big Sky</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'wheat': '#f4efeb', 
+                        'evergreen': '#00473f',
+                        'evergreen-dark': '#00251e',
+                        'sand': '#f4efeb',
+                        'clay': '#b18878' // Approximated from image
+                    },
+                    fontFamily: {
+                        // Using system fallbacks that mimic the custom fonts
+                        'century': ['"Century Old Style Std"', 'Georgia', 'Times New Roman', 'serif'],
+                        'sentinel': ['Sentinel', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    spacing: {
+                        'section-small': '48px',
+                        'section-medium': '64px',
+                        'section-large': '96px',
+                        'section-xlarge': '148px',
+                    },
+                    maxWidth: {
+                        'bleed': '2500px',
+                        'grid': '2000px',
+                        'text-wide': '665px',
+                        'text-narrow': '460px',
+                    },
+                    borderRadius: {
+                        '4': '4px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom font imports if available, otherwise fallbacks apply */
+        @import url("https://use.typekit.net/zwn8qqz.css");
+
+        body {
+            font-family: "sentinel-a", "sentinel-b", Georgia, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .font-century {
+            font-family: "century-old-style-std", serif;
+        }
+        
+        .body12-caps {
+            font-size: 12px;
+            line-height: 170%;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+        }
+
+        .cta-compressed {
+            display: inline-block;
+            border: 1px solid currentColor;
+            border-radius: 100px;
+            padding: 8px 24px;
+            font-size: 14px;
+            font-style: italic;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .cta-compressed:hover {
+            opacity: 0.7;
+        }
+
+        .cta-compressed.green {
+            border-color: #00251e;
+            color: #00251e;
+        }
+        
+        .cta-compressed.transparent {
+            border-color: #f4efeb;
+            color: #f4efeb;
+        }
+        
+        .text-pretty {
+            text-wrap: pretty;
+        }
+        
+        /* Hide scrollbar for carousel */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-wheat text-evergreen-dark antialiased">
+
+    <header class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 py-4 md:pt-10">
+        <nav class="relative mx-auto flex items-center justify-between px-8 max-w-grid text-white">
+            <button class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+
+            <ul class="hidden md:flex flex-1 justify-start body12-caps gap-8 items-center">
+                <li><a href="#" class="hover:opacity-70 transition-opacity">The Property</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Homes</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Inquire</a></li>
+            </ul>
+
+            <a href="/" class="flex-shrink-0 mx-auto transform transition-transform hover:scale-105">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 123 64" fill="currentColor" class="h-12 md:h-16 text-sand">
+                    <path d="M121.135 33.46c-1.394.834-2.204 2.367-3.374 3.48-.075.071-.187.166-.262.127-.053-.064-.023-.223-.008-.318.69-2.574.69-5.291.203-7.905-.473-2.17-1.08-6.197-3.704-6.356-2.745.318-3.569 3.607-4.747 5.768-1.139 2.367-2.271 4.743-3.614 6.975-1.049 1.59-2.016 3.456-3.644 4.434-1.807.913-3.696-.74-4.37-2.48-.503-1.183-.743-2.59-.023-3.741l1.844-3.472c1.117-2.026 2.482-4.926 3.509-7.055.24-.477.6-1.32.892-1.724.383-.5.99-.77 1.598-.707l7.737.262a3.813 3.813 0 0 0 2.145-.5c.69-.366 1.23-1.2.96-2.035-.533-.873-1.575-.746-2.422-.89-2.497-.238-5.256-.007-7.633-.238-.503-.19-.008-.945.097-1.279.353-.961.945-1.859 1.35-2.812.412-.874 1.057-2.55-.24-2.924-3.307.024-3.419 4.759-5.174 6.666-.727.516-1.679.508-2.579.476-1.23-.047-2.647-.238-3.719.517-.9.611-1.59 2.097-.24 2.645 1.185.326 2.385.167 3.577.2.375.015.817.007.967.237.127.533-.54 1.597-.78 2.17-2.909 5.656-5.068 12.227-10.234 16.04-3.435 2.264-8.72-.23-8.128-4.91l.135-.762.247-.731c.93-2.36 2.325-4.76 4.431-6.102.84-.5 1.882-.707 2.782-.477.593.207 1.065.731 1.642 1.128 1.155.93 3.09.024 3.36-1.47.15-1.23-.87-2.01-1.755-2.51-2.145-1.232-4.769-.596-6.778.651-3.45 2.17-6.186 5.681-7.46 9.717-.518 1.247-.173 3.035-.848 4.028-3.292 2.956-11.997 4.116-11.772-2.455.03-.715.368-1.55 1.057-1.676 4.027-.413 8.503-1.55 11.195-4.998 1.424-1.85 1.14-4.703-1.155-5.545-4.971-1.716-9.357 2.661-12.184 6.49-.218.207-.607.366-.945.374-.997-.071-2.197-.35-2.991-.953-.99-1.232-.878-3.122-2.032-4.267-2.857-3.416-7.55-.866-10.333 1.224-.075-.087.023-.35.03-.43.293-.85.698-1.93.098-2.756-.33-.397-.885-.413-1.305-.246-2.242.93-2.497 3.79-3.291 5.863-1.523 3.29-3.832 6.308-6.719 8.366-.202 0-.21-.445-.21-.636-.27-3.956-1.274-7.841-2.451-11.591-.21-.572-.488-1.152-.923-1.597-.427-.278-.937-.5-1.462-.43-1.56.287-2.302 2.059-2.984 3.362-2.287 4.568-4.746 9.097-7.483 13.37-1.17 1.693-2.79 1.479-3.629-.373-1.057-3.932 2.654-7.46 2.797-11.345 0-1.072-1.432-1.033-1.815-1.628-2.744-6.785-9.252-4.195-12.934.182C2.45 29.376-.346 34.167.666 39.061c1.694 5.863 8.09 4.775 11.487 1.486.404-.31.652-.676.974-.962.15-.135.345-.262.435-.238.083.016.173.206.225.413.54 3.035 4.034 4.33 6.493 3.027.983-.246 1.837-1.533 2.94-1.597.787.207 1.74 1.311 2.841 1.645 1.567.683 3.577.73 5.256.119 3.135-1.335 6.359-3.575 8.706-5.776-.06.31-.263.763-.39 1.057-.338.85-1.23 2.931-1.583 3.821-1.806 4.1-3.246 8.819-6.748 11.663-.854.7-1.852 1.152-2.886 1.47-.623.143-1.38.222-1.927.596-.863.485-1.807 1.764-.645 2.495 5.84.945 10.28-4.704 12.814-9.582 2.7-5.117 4.469-10.662 6.695-15.97 1.68-2.415 3.914-5.346 6.816-6.347 2.01-.683 3.217 1.374 3.554 3.202a10.702 10.702 0 0 1-1.124 6.951l-.285-.596s.164.453.24.668c-.083.143-.158.294-.24.429-1.185 1.97-4.162 4.14-5.834 1.589-.682-1.112-1.987-2.44-3.254-1.35-1.942 1.366-.51 4.162 1.05 5.18 5.36 2.907 11.464-3.37 12.919-8.597.157-.604.547-1.152 1.2-1.001.517.08 1.304.15 1.401.802-.232.827-.442 2.24-.412 3.29.233 8.318 10.685 6.856 15.476 3.924 1.087-.802 1.807-.516 2.662.469 4.101 3.551 10.234 1.533 13.683-2.074.203-.19.413-.397.66-.468.248-.072.473.127.638.35.637.937 1.02 2.136 1.979 2.812 1.814 1.462 4.424 1.438 6.343.254.78-.318 1.417-1.247 2.302-1.303.435.032.802.373 1.155.66 2.557 2.248 6.246 1.787 9.042.31 2.482-1.232 4.507-3.266 6.329-5.395.584-.707 1.214-1.502 1.312-2.487.037-1.025-1.2-.97-1.785-.548l-.045.008Zm-6.935-8.93s0 .023-.008.04c0 0-.015 0-.022.007 0-.024.015-.04.022-.055h.008v.008Zm-6.314 12.95c-.375-.842.645-1.446.93-2.225 1.582-2.415 2.797-5.784 4.281-8.27 2.317 4.655 1.74 18.797-5.211 10.495ZM67 30.115c.27-.779.967-1.446 1.455-2.082 1.17-1.533 5.098-3.527 6.223-1.215.195 1.517-1.687 1.994-2.722 2.439-1.59.588-3.269.921-4.956.866v-.008Zm-34.94 9.653s0 .008-.008.016v-.016c0-.008.015 0 .015.008l-.007-.008Zm-.12.087.03-.016c-.008 0-.023.016-.03.016Zm.045-.214s-.03.016-.053 0v-.048c-.037-.048-.06-.032-.052.016-.023 0-.015.032.022.135 0 0 0 .016-.007.032l-.083-.127s-.015.024-.03.04c0 0-.007 0-.015-.008-.022 0-.045 0-.022.047l.015.032c-.053-.048-.045 0-.015.072h-.008s-.007 0-.015-.008l-.36-.342s.353.405.413.477c-.038.031-.075.063-.12.087a.06.06 0 0 0-.038-.056c.015.024.023.048.03.064 0 0-.007 0-.015.008-.022-.008-.022-.024-.03-.016l.008.024v-.024l-.083-.151c.023 0 .023.008.023.016l-.023-.048s.015.008.023.016c-.023-.047-.045-.087-.053-.087 0 0 .008.032 0 .055-.052.048-.037.183.03.151-.03.016-.037.064 0 .096.008 0 .015.008.03.016-.022.016-.037.031-.052.04-2.182.587-4.394-1.018-5.646-2.702-.143-.183-.083-.508 0-.675 1.394-2.733 3.029-5.61 4.604-8.24.12-.198.284-.492.345-.54.165.2.217.867.292 1.113.39 2.415 2.767 8.35.99 10.527-.068-.064-.105-.016-.113.016l.008-.008Zm-.368.453h.008-.008Zm-.405.127c-.067.016-.135.024-.202.032.067-.008.135-.024.202-.032Zm.428-.143c.052-.032.09-.072.142-.104-.045.032-.09.072-.142.104Zm.495-.405v-.016c.097-.111.195-.223.277-.35a2.137 2.137 0 0 1-.27.366h-.007Zm-17.41-7.175c-.75 1.605-1.598 3.162-2.632 4.585-1.328 2.018-3.974 4.226-6.261 2.542-2.347-1.486-2.077-4.751-1.11-7.087.63-1.66 1.56-3.178 2.594-4.584 1.02-1.343 2.28-2.717 3.907-3.075 2.182-.477 3.659 1.867 4.011 3.885.398 1.32.158 2.582-.51 3.742v-.008Z"></path></svg>
+            </a>
+
+            <ul class="hidden md:flex flex-1 justify-end body12-caps gap-8 items-center">
+                <li><a href="#" class="hover:opacity-70 transition-opacity">The Bulletin</a></li>
+                <li><a href="#" class="cta-compressed transparent hover:bg-white/20 transition-all">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="relative min-h-[100vh] flex items-end">
+            <div class="absolute inset-0 z-0">
+                <img src="https://cdn.sanity.io/images/r6m0dfzf/production/e758811b2224e4f6e8254045c8cd7e9acb5a934d-750x1400.jpg?w=828&fit=min&auto=format&q=100" class="block md:hidden w-full h-full object-cover object-bottom" alt="Cabin exterior mobile">
+                <img src="https://cdn.sanity.io/images/r6m0dfzf/production/0767224e0480b4b12a4955ec2687ac4bfdc998d4-2946x1964.jpg?w=1920&fit=min&auto=format&q=100" class="hidden md:block w-full h-full object-cover object-bottom" alt="Cabin exterior desktop">
+            </div>
+
+            <div class="container relative z-10 mx-auto px-6 py-12 md:py-14 flex flex-col md:flex-row justify-between items-end w-full max-w-grid">
+                <div class="flex flex-col max-w-text-wide text-sand mb-12 md:mb-0">
+                    <h3 class="body12-caps mb-4">6 landscaped acres. 10 modern homes.</h3>
+                    <h1 class="font-century text-[32px] md:text-[44px] leading-tight mb-6">Escape to a new kind of vacation<br>home in Big Sky, Montana</h1>
+                    <div>
+                        <a href="#" class="cta-compressed transparent">Book your stay</a>
+                    </div>
+                </div>
+
+                <a href="#" class="hidden md:block relative w-[287px] group transition-transform duration-1000 hover:rotate-2 rotate-[1.5deg]">
+                    <div class="relative overflow-hidden rounded-md shadow-xl">
+                        <img src="https://cdn.sanity.io/images/r6m0dfzf/production/d709f483337fb676a863f12f65ac59a7d868767d-664x976.png?w=640&fit=min&auto=format&h=941&q=100" alt="Interior view" class="w-full h-auto">
+                        <div class="absolute bottom-6 left-6 text-sand font-handdrawn text-[24px] italic flex items-center gap-2">
+                            Explore the property
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="12" viewBox="0 0 53 14" fill="currentColor"><path d="M52.177 5.31c.03.044.027.154-.05.14l-.072-.174.123.04v-.005ZM51.705 5.694c-.097-.08-.212-.225-.173-.398.105.168.12.09.23.291.078.015.125-.07.106-.135.03.043.115-.054.163.061-.084.152-.21.167-.346.06-.027.045.002.089.014.121h.006ZM44.378 6.615l.044-.023s-.027.023-.044.023ZM39.828 7.058c.033 0 .05.02.056.037-.033-.01-.061-.02-.056-.037ZM39.066 7.32s.032-.011.043-.017c-.016.017-.032.028-.043.018ZM44.379 6.615l-.12.065c-.013-.06.06-.052.12-.065ZM50.65 5.346s.051.02.074.042l-.061-.015-.001-.027h-.011ZM46.397 6.598l.039-.001s.023.043.035.07l-.074-.07ZM47.945 6.495c-.033.012-.06-.142-.078-.207.023.06.052.092.085.096.001.028.002.067-.007.111ZM50.362 6.007l.045.015-.045-.015ZM45.297 6.725s-.004.044-.01.055c0-.022 0-.038.01-.055ZM2.078 7.346l.001.027c-.012-.016-.012-.027 0-.027ZM.285 8.118l.028.005.002.088-.03-.093ZM37.65 7.612h.005c.039.01.017.01-.006 0ZM24.54 8.218c.145-.143-.248-.17-.032-.33-.02.061.212.23.032.33ZM50.613 5.37l-.06.001c.027-.006.05-.007.06-.002ZM24.51 7.888l.021-.017a.076.076 0 0 0-.021.017ZM34.356 7.73s.015-.05.03-.068c.001.017-.004.033-.03.067ZM36.79 7.357l-.06.024s.043-.023.06-.024ZM33.074 7.592c-.032.012-.043.034-.087.02 0-.006.005-.012.01-.018.017.022.04.027.077-.002ZM31.751 7.666s.016-.023.021-.034l.044-.001-.065.035ZM6.094 7.404a.635.635 0 0 0-.062.14c.019-.111-.176-.15.062-.14ZM50.66 5.433c-.012-.038-.024-.054-.046-.064l.044-.002c0 .028.007.05.002.066ZM32.95 6.37l-.21.033a.805.805 0 0 1 .21-.034ZM15.582 7.257l-.05-.015s.034-.001.05.015ZM32.117 6.418a.356.356 0 0 1-.112.114c-.012-.01-.018-.022-.03-.038l.142-.076Z"/></svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-24 text-evergreen-dark bg-white">
+            <div class="container mx-auto px-6 text-center max-w-text-wide">
+                <h3 class="body12-caps mb-4">BIG SKY FOR ALL</h3>
+                <h2 class="font-century text-[24px] md:text-[32px] leading-tight mb-8">Bring friends, family, or just yourself. There’s room for everyone, and their everyones.</h2>
+                <a href="#" class="cta-compressed green">Explore our homes</a>
+            </div>
+        </section>
+
+        <section class="overflow-hidden py-10 bg-white">
+            <div class="flex items-center gap-4 md:gap-8 overflow-x-auto no-scrollbar pl-4 md:pl-[10vw]">
+                <div class="min-w-[280px] md:min-w-[400px] aspect-square relative transform rotate-0">
+                    <img src="https://cdn.sanity.io/images/r6m0dfzf/production/b8842e6ef8eae8e0906ea852ff70862e20a99d6e-719x701.png?w=640&fit=min&auto=format&q=100" class="w-full h-full object-contain" alt="Interior">
+                </div>
+                <div class="min-w-[280px] md:min-w-[400px] aspect-square relative transform rotate-[1.6deg]">
+                    <img src="https://cdn.sanity.io/images/r6m0dfzf/production/e34cb59c4c3a077d9b4ce5bb273c15059db0edb3-559x771.png?w=640&fit=min&auto=format&q=100" class="w-full h-full object-contain" alt="Exterior">
+                </div>
+                <div class="min-w-[280px] md:min-w-[400px] aspect-square relative transform -rotate-[1.4deg]">
+                    <img src="https://cdn.sanity.io/images/r6m0dfzf/production/9414c8432fc9c4c62ce0788580accde378c4fc0c-655x701.png?w=640&fit=min&auto=format&q=100" class="w-full h-full object-contain" alt="Detail">
+                </div>
+                <div class="min-w-[280px] md:min-w-[400px] aspect-square relative transform -rotate-[2.3deg]">
+                    <img src="https://cdn.sanity.io/images/r6m0dfzf/production/f3f0dc3ec35008b49be3bf69c7292851a78d06f8-650x701.png?w=640&fit=min&auto=format&q=100" class="w-full h-full object-contain" alt="Activity">
+                </div>
+            </div>
+        </section>
+
+        <section class="relative py-20 md:py-32 bg-wheat overflow-hidden">
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+                <img src="https://cdn.sanity.io/images/r6m0dfzf/production/f770cefecf1c37934496b2961992eb25d3982a15-856x501.png?w=1920&fit=min&auto=format&q=100" class="w-full h-full object-cover md:object-contain md:scale-150 transform translate-y-20" alt="Map">
+            </div>
+
+            <div class="container relative z-10 mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 max-w-grid mx-auto">
+                    <div>
+                         </div>
+                    <div class="flex flex-col justify-center">
+                        <h3 class="body12-caps mb-3">Our Homes</h3>
+                        <h2 class="font-century text-[32px] leading-tight mb-8 max-w-md">We’ve considered every detail, so you don’t have to.</h2>
+                        
+                        <ul class="space-y-8">
+                            <li class="opacity-100 transform translate-y-0 transition-all duration-500 cursor-pointer">
+                                <div class="flex flex-col">
+                                    <span class="body12-caps mb-1">THE PRESENT IS THE PRESENT</span>
+                                    <p class="font-light">Reconnect with what matters, don’t worry about the rest.</p>
+                                </div>
+                            </li>
+                            <li class="opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                                <div class="flex flex-col">
+                                    <span class="body12-caps mb-1">COOK A BIG MEAL</span>
+                                    <p class="font-light">The kitchen’s stocked with tools and provisions.</p>
+                                </div>
+                            </li>
+                            <li class="opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                                <div class="flex flex-col">
+                                    <span class="body12-caps mb-1">TAKE IN THE VIEWS</span>
+                                    <p class="font-light">Marvel at Levinski Ridge and Ramshorn peak from your living room.</p>
+                                </div>
+                            </li>
+                             <li class="opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                                <div class="flex flex-col">
+                                    <span class="body12-caps mb-1">CRAWL INTO COMFORT</span>
+                                    <p class="font-light">Your bedroom has premium bedding, a great mattress, and blackout curtains.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-grid mx-auto mt-20">
+                    <a href="#" class="group block">
+                        <div class="aspect-[2/3] overflow-hidden rounded-md mb-6">
+                            <img src="https://cdn.sanity.io/images/r6m0dfzf/production/2dff1e81bc639a0915a1ff99c67b355869dde068-550x736.jpg?w=640&fit=min&auto=format&q=100" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Traditional Home">
+                        </div>
+                        <h3 class="font-century text-2xl mb-2">Traditional Home</h3>
+                        <span class="body12-caps block mb-2">The Classic</span>
+                        <p class="font-light text-sm">A blend of privacy and tranquility in the heart of the property. Sleeps 6-7.</p>
+                    </a>
+
+                     <a href="#" class="group block">
+                        <div class="aspect-[2/3] overflow-hidden rounded-md mb-6">
+                            <img src="https://cdn.sanity.io/images/r6m0dfzf/production/bf62bbc2a88bffae24eac0901f658fc86da9c60c-550x736.jpg?w=640&fit=min&auto=format&q=100" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Signature Home">
+                        </div>
+                        <h3 class="font-century text-2xl mb-2">Signature Home</h3>
+                        <span class="body12-caps block mb-2">INCLUDES A HOT TUB</span>
+                        <p class="font-light text-sm">Our classic cabin, plus a hot tub with mountain views. Sleeps 6-7.</p>
+                    </a>
+
+                     <a href="#" class="group block">
+                        <div class="aspect-[2/3] overflow-hidden rounded-md mb-6">
+                            <img src="https://cdn.sanity.io/images/r6m0dfzf/production/579766f8d9c2e401c6bf01aff3c1e2a2281adf13-550x736.jpg?w=640&fit=min&auto=format&q=100" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Side-By-Side">
+                        </div>
+                        <h3 class="font-century text-2xl mb-2">Side-By-Side Homes</h3>
+                        <span class="body12-caps block mb-2">FOR LARGER GROUPS</span>
+                        <p class="font-light text-sm">Book two or more homes, for group trips, family reunions, and more. Sleeps 12-65.</p>
+                    </a>
+
+                     <a href="#" class="group block">
+                        <div class="aspect-[2/3] overflow-hidden rounded-md mb-6">
+                            <img src="https://cdn.sanity.io/images/r6m0dfzf/production/8cb159f9ce5073fddf8dddc7a87b8f5e70fa0071-550x736.jpg?w=640&fit=min&auto=format&q=100" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Full Buyout">
+                        </div>
+                        <h3 class="font-century text-2xl mb-2">Property Takeover</h3>
+                        <span class="body12-caps block mb-2">FOR SPECIAL EVENTS</span>
+                        <p class="font-light text-sm">Exclusive access to all 10 homes and the property. Sleeps 65.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative min-h-[600px] md:min-h-[800px] flex items-center justify-center">
+            <div class="absolute inset-0">
+                <img src="https://cdn.sanity.io/images/r6m0dfzf/production/3850ec8d9649f0c9eacb15656bb9bfce64523e14-2560x1202.jpg?w=1920&fit=min&auto=format&q=100" class="w-full h-full object-cover" alt="Montana landscape">
+            </div>
+            <div class="relative z-10 text-center text-sand px-6 max-w-text-wide">
+                <h3 class="body12-caps mb-4">Welcome to Big Sky Country</h3>
+                <h2 class="font-century text-3xl md:text-5xl mb-8">Experience the unmatched beauty of Montana right from your patio.</h2>
+                <a href="#" class="cta-compressed transparent">Explore the property</a>
+            </div>
+        </section>
+
+        <section class="bg-evergreen-dark text-sand py-20">
+            <div class="container mx-auto px-6 text-center max-w-text-wide mb-16">
+                <h3 class="body12-caps mb-4">AT THE READY</h3>
+                <h2 class="font-century text-3xl md:text-4xl">We’ll handle everything you need</h2>
+            </div>
+
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-grid">
+                <div class="flex flex-col">
+                    <div class="relative aspect-[92/117] rounded-4 overflow-hidden bg-evergreen mb-6">
+                        <img src="https://cdn.sanity.io/images/r6m0dfzf/production/c8235b9f009e60313fc748a381687e40dc8f85ed-736x942.jpg?w=828&fit=min&auto=format&q=100" class="w-full h-full object-cover" alt="Pantry kit">
+                    </div>
+                    <div class="px-2">
+                        <h3 class="body12-caps mb-2">pantry kit</h3>
+                        <p class="font-century text-lg">You'll find all the spices, oils, and essentials you'll need</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="relative aspect-[92/117] rounded-4 overflow-hidden bg-evergreen mb-6">
+                        <img src="https://cdn.sanity.io/images/r6m0dfzf/production/cc14f50d0f796cb876f1c5e5d1dec1fdce5a12ae-736x942.jpg?w=828&fit=min&auto=format&q=100" class="w-full h-full object-cover" alt="Firewood">
+                    </div>
+                    <div class="px-2">
+                        <h3 class="body12-caps mb-2">Ready-light Fires</h3>
+                        <p class="font-century text-lg">Make a campfire at the flip of a switch</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="relative aspect-[92/117] rounded-4 overflow-hidden bg-evergreen mb-6">
+                        <img src="https://cdn.sanity.io/images/r6m0dfzf/production/05777467ff131f2728ced4a292c6c9226223ba1b-1000x1500.png?w=828&fit=min&auto=format&q=100" class="w-full h-full object-cover" alt="Robes">
+                    </div>
+                    <div class="px-2">
+                        <h3 class="body12-caps mb-2">Robes and Towels</h3>
+                        <p class="font-century text-lg">In Signature Homes, robes and towels accompany your hot tub</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mx-auto px-6 mt-16 max-w-[1552px]">
+                <div class="bg-evergreen rounded-4 p-8 md:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-6 order-2 md:order-1">
+                        <h2 class="font-century text-xl md:text-2xl leading-snug">Gear rentals. Great guides. Local recommendations. We’re here to help you plan the best trip ever.</h2>
+                    </div>
+                    <div class="md:col-span-3 order-1 md:order-2 flex justify-center">
+                        <img src="https://cdn.sanity.io/images/r6m0dfzf/production/50437b7108811a9cd26886bb08fefd8d298cebd7-236x256.png?w=640&fit=min&auto=format&q=100" class="w-32 h-auto" alt="Icon">
+                    </div>
+                    <div class="md:col-span-3 order-3 flex justify-center md:justify-end">
+                        <a href="#" class="cta-compressed transparent">Get in touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-32 bg-wheat text-evergreen-dark text-center overflow-hidden">
+             <div class="container mx-auto px-6 flex flex-col items-center">
+                <h3 class="body12-caps mb-8">Reviews</h3>
+                
+                <div class="relative w-full max-w-[900px] flex justify-center items-center py-10">
+                    <div class="absolute left-[10%] top-0 w-[200px] md:w-[350px] transform -rotate-6 z-0 hidden md:block">
+                        <img src="https://cdn.sanity.io/images/r6m0dfzf/production/e0d305fb8948030d4af614fe13590d7a9d907a19-919x916.png?w=640&fit=min&auto=format&q=100" class="w-full h-auto object-contain" alt="Review 1">
+                    </div>
+                     <div class="absolute right-[10%] top-6 w-[200px] md:w-[350px] transform rotate-6 z-0 hidden md:block">
+                        <img src="https://cdn.sanity.io/images/r6m0dfzf/production/a2695c0e20c867fbe1fff9970da34d1b674d392d-777x775.png?w=640&fit=min&auto=format&q=100" class="w-full h-full object-contain" alt="Review 2">
+                    </div>
+
+                    <div class="relative z-10 max-w-[450px] flex flex-col gap-6 items-center">
+                         <p class="font-century text-2xl md:text-3xl leading-tight">"Had a girls weekend here and we had the best time ever! I’m already wanting to go back!"</p>
+                         <div class="flex flex-col items-center gap-2 text-clay">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" fill="currentColor" viewBox="0 0 80 16">
+                                <path d="m8.275 11.919 3.15 2c.406.256.906-.125.787-.594L11.3 9.738a.543.543 0 0 1 .181-.55l2.825-2.357c.369-.306.182-.925-.3-.956l-3.687-.237a.519.519 0 0 1-.457-.338L8.489 1.838a.519.519 0 0 0-.975 0L6.138 5.3a.519.519 0 0 1-.457.338l-3.687.237c-.482.031-.669.65-.3.956l2.825 2.357a.544.544 0 0 1 .181.55l-.844 3.325c-.143.562.457 1.018.938.712l2.931-1.856a.512.512 0 0 1 .55 0ZM24.275 11.919l3.15 2c.406.256.906-.125.787-.594L27.3 9.738a.543.543 0 0 1 .181-.55l2.825-2.357c.369-.306.181-.925-.3-.956l-3.687-.237a.519.519 0 0 1-.456-.338l-1.375-3.462a.519.519 0 0 0-.976 0L22.137 5.3a.519.519 0 0 1-.456.338l-3.687.237c-.482.031-.669.65-.3.956l2.825 2.357a.544.544 0 0 1 .181.55l-.844 3.325c-.144.562.456 1.018.938.712l2.931-1.856a.512.512 0 0 1 .55 0ZM40.275 11.919l3.15 2c.406.256.906-.125.788-.594L43.3 9.738a.543.543 0 0 1 .181-.55l2.825-2.357c.369-.306.181-.925-.3-.956l-3.687-.237a.519.519 0 0 1-.457-.338l-1.375-3.462a.519.519 0 0 0-.974 0L38.138 5.3a.519.519 0 0 1-.457.338l-3.687.237c-.481.031-.669.65-.3.956l2.825 2.357a.544.544 0 0 1 .181.55l-.844 3.325c-.144.562.456 1.018.938.712l2.931-1.856a.512.512 0 0 1 .55 0ZM56.275 11.919l3.15 2c.406.256.906-.125.788-.594L59.3 9.738a.543.543 0 0 1 .181-.55l2.825-2.357c.369-.306.181-.925-.3-.956l-3.687-.237a.519.519 0 0 1-.457-.338l-1.375-3.462a.519.519 0 0 0-.974 0L54.138 5.3a.519.519 0 0 1-.457.338l-3.687.237c-.481.031-.669.65-.3.956l2.825 2.357a.544.544 0 0 1 .181.55l-.844 3.325c-.144.562.456 1.018.938.712l2.931-1.856a.512.512 0 0 1 .55 0ZM72.275 11.919l3.15 2c.406.256.906-.125.788-.594L75.3 9.738a.543.543 0 0 1 .181-.55l2.825-2.357c.369-.306.181-.925-.3-.956l-3.687-.237a.519.519 0 0 1-.457-.338l-1.374-3.462a.519.519 0 0 0-.975 0L70.136 5.3a.519.519 0 0 1-.456.338l-3.687.237c-.481.031-.669.65-.3.956l2.825 2.357a.544.544 0 0 1 .181.55l-.844 3.325c-.143.562.457 1.018.938.712l2.931-1.856a.512.512 0 0 1 .55 0Z"></path>
+                            </svg>
+                            <span class="text-sm font-light text-evergreen-dark">@oliviawitt | 4 night stay with 6 people</span>
+                         </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-2 mt-4">
+                    <span class="w-2 h-2 rounded-full border border-evergreen-dark bg-transparent cursor-pointer"></span>
+                    <span class="w-2 h-2 rounded-full border border-evergreen-dark bg-transparent cursor-pointer"></span>
+                    <span class="w-2 h-2 rounded-full border border-evergreen-dark bg-evergreen-dark cursor-pointer"></span>
+                </div>
+             </div>
+        </section>
+
+        <section class="relative min-h-[600px] md:min-h-[800px] flex items-center justify-center">
+             <div class="absolute inset-0">
+                <img src="https://cdn.sanity.io/images/r6m0dfzf/production/56af0e668282da8c12081547342d6cc1673c7339-2560x1402.jpg?w=1920&fit=min&auto=format&q=100" class="w-full h-full object-cover object-bottom" alt="Final landscape">
+             </div>
+             <div class="container relative z-10 px-6 py-12 flex flex-col md:flex-row justify-between items-end h-full w-full max-w-grid mt-auto" style="min-height: 500px;">
+                <div class="flex flex-col text-sand max-w-text-wide">
+                    <h3 class="body12-caps mb-4">RESERVATIONS</h3>
+                    <h2 class="font-century text-3xl md:text-5xl mb-6">Space to relax,<br>spaces to reconnect.</h2>
+                    <div>
+                        <a href="#" class="cta-compressed transparent">Book your stay</a>
+                    </div>
+                </div>
+                
+                <a href="#" class="hidden md:block w-[470px] relative translate-y-[30%]">
+                    <div class="relative">
+                        </div>
+                 </a>
+             </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-evergreen pt-10 text-sand">
+        <div class="container mx-auto px-6 mb-16 flex flex-col md:flex-row items-center justify-center gap-10">
+            <p class="font-century text-xl md:text-2xl max-w-[500px] text-center md:text-left">Sign up for an intermittent dispatch of cool stories and cool things to do, written by cool people (us)</p>
+            <form class="w-full max-w-[420px] flex border border-sand p-4">
+                <input type="email" placeholder="Enter your email to subscribe" class="bg-transparent border-none outline-none flex-1 placeholder-sand text-sand">
+                <button type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+
+        <div class="border-t border-sand py-10 flex flex-col items-center gap-6 body12-caps text-center">
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-6">
+                    <li><a href="#" class="hover:opacity-70">The Property</a></li>
+                    <li><a href="#" class="hover:opacity-70">Homes</a></li>
+                    <li><a href="#" class="hover:opacity-70">Instagram</a></li>
+                    <li><a href="#" class="hover:opacity-70">Inquire</a></li>
+                    <li><a href="#" class="hover:opacity-70">Book Now</a></li>
+                </ul>
+            </nav>
+            
+            <div class="text-xs opacity-80 mt-4">
+                <p>200 Misty Mountain Court, BIG Sky MT 59730 | (406) 518-1284 | <a href="mailto:contact@experienceaspects.com" class="underline">contact@experienceaspects.com</a></p>
+                <p class="mt-4">© A Misty Mountain Court Manager LLC 2026</p>
+            </div>
+            
+            <div class="mt-8 opacity-20 w-full max-w-[800px]">
+                 <svg viewBox="0 0 100 20" class="w-full h-auto fill-current">
+                     <path d="M0,10 Q25,0 50,10 T100,10" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2"/>
+                 </svg>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

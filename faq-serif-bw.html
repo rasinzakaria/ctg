@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently asked questions about CTG Brands — ordering, products, brands, and more.">
+    <title>FAQ - CTG Brands Inc</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'wheat': '#f5f5f5',
+                        'evergreen': '#2d2d2d',
+                        'evergreen-dark': '#141414',
+                        'sand': '#f5f5f5',
+                        'clay': '#888888'
+                    },
+                    fontFamily: {
+                        'century': ['"century-old-style-std"', 'Georgia', '"Times New Roman"', 'serif'],
+                        'sentinel': ['Sentinel', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    maxWidth: {
+                        'bleed': '2500px',
+                        'grid': '2000px',
+                        'text-wide': '665px',
+                        'text-narrow': '460px',
+                    },
+                    borderRadius: {
+                        '4': '4px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url("https://use.typekit.net/zwn8qqz.css");
+
+        body {
+            font-family: "sentinel-a", "sentinel-b", Georgia, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .font-century {
+            font-family: "century-old-style-std", serif;
+        }
+
+        .body12-caps {
+            font-size: 12px;
+            line-height: 170%;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+        }
+
+        .cta-compressed {
+            display: inline-block;
+            border: 1px solid currentColor;
+            border-radius: 100px;
+            padding: 8px 24px;
+            font-size: 14px;
+            font-style: italic;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .cta-compressed:hover {
+            opacity: 0.7;
+        }
+
+        .cta-compressed.green {
+            border-color: #141414;
+            color: #141414;
+        }
+
+        .cta-compressed.transparent {
+            border-color: #f5f5f5;
+            color: #f5f5f5;
+        }
+
+        /* Header scroll state */
+        .header-scrolled {
+            background-color: rgba(245, 245, 245, 0.97) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .header-scrolled nav {
+            color: #141414 !important;
+        }
+        .header-scrolled .cta-compressed.transparent {
+            border-color: #141414;
+            color: #141414;
+        }
+        .header-scrolled .logo-light { display: none; }
+        .header-scrolled .logo-dark { display: block !important; }
+
+        /* Scroll to top */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 5em;
+            right: 2em;
+            z-index: 1000;
+            display: none;
+            transition: opacity 0.3s ease;
+        }
+        .scroll-to-top.show {
+            display: block;
+            opacity: 1;
+        }
+
+        /* FAQ accordion */
+        .faq-item {
+            border-bottom: 1px solid rgba(20, 20, 20, 0.1);
+        }
+
+        .faq-question {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 600px;
+            opacity: 1;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="bg-wheat text-evergreen-dark antialiased">
+
+    <!-- HEADER -->
+    <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 py-4 md:pt-8 md:pb-4 header-scrolled">
+        <nav class="relative mx-auto flex items-center justify-between px-6 md:px-10 max-w-grid text-evergreen-dark">
+            <!-- Mobile menu button -->
+            <button id="mobileMenuBtn" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+
+            <!-- Left nav -->
+            <ul class="hidden md:flex flex-1 justify-start body12-caps gap-8 items-center">
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Everyday</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Seasonal</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Home Décor</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Brands</a></li>
+            </ul>
+
+            <!-- Logo -->
+            <a href="#" class="flex-shrink-0 mx-auto">
+                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands logo" class="h-10 md:h-12 w-auto" />
+            </a>
+
+            <!-- Right nav -->
+            <ul class="hidden md:flex flex-1 justify-end body12-caps gap-8 items-center">
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Our Story</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Catalogs</a></li>
+                <li><a href="#" class="cta-compressed green hover:opacity-70 transition-all">Login</a></li>
+            </ul>
+
+            <!-- Mobile cart icon -->
+            <a href="#" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/>
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] bg-evergreen-dark text-sand hidden">
+        <div class="flex justify-between items-center p-6">
+            <span class="body12-caps">Menu</span>
+            <button id="mobileMenuClose">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center justify-center gap-8 pt-16">
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Everyday</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Seasonal</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Home Décor</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Brands</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Our Story</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Catalogs</a>
+            <a href="#" class="font-century text-3xl hover:opacity-70 transition-opacity">Sale</a>
+            <div class="mt-8">
+                <a href="#" class="cta-compressed transparent">Login</a>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <!-- PAGE HERO -->
+        <section class="pt-32 md:pt-44 pb-16 md:pb-20 bg-wheat">
+            <div class="container mx-auto px-6 max-w-text-wide text-center">
+                <h3 class="body12-caps mb-4 opacity-50">Support</h3>
+                <h1 class="font-century text-[36px] md:text-[52px] leading-tight">Frequently Asked<br>Questions</h1>
+            </div>
+        </section>
+
+        <!-- FAQ CONTENT -->
+        <section class="pb-20 md:pb-28 bg-wheat">
+            <div class="container mx-auto px-6 max-w-[760px]">
+
+                <!-- Divider top -->
+                <div class="border-t border-evergreen-dark/10"></div>
+
+                <!-- Q1 -->
+                <div class="faq-item">
+                    <button class="faq-question w-full flex items-center justify-between py-7 md:py-9 text-left gap-6" onclick="toggleFaq(this)">
+                        <h2 class="font-century text-lg md:text-xl leading-snug">What is the meaning of the dots on the items?</h2>
+                        <span class="faq-icon text-2xl leading-none opacity-40">+</span>
+                    </button>
+                    <div class="faq-answer pb-8 md:pb-10">
+                        <div class="space-y-3 text-sm md:text-base leading-relaxed opacity-70">
+                            <div class="flex items-start gap-3">
+                                <span class="w-2 h-2 rounded-full bg-green-500 mt-2 flex-shrink-0"></span>
+                                <p><strong class="font-medium opacity-100">Green</strong> &mdash; on current order</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-2 h-2 rounded-full bg-orange-400 mt-2 flex-shrink-0"></span>
+                                <p><strong class="font-medium opacity-100">Orange</strong> &mdash; on another open order for that customer</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0"></span>
+                                <p><strong class="font-medium opacity-100">Blue</strong> &mdash; customer has ordered in the past but not on an open order</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="faq-item">
+                    <button class="faq-question w-full flex items-center justify-between py-7 md:py-9 text-left gap-6" onclick="toggleFaq(this)">
+                        <h2 class="font-century text-lg md:text-xl leading-snug">How do I place an order?</h2>
+                        <span class="faq-icon text-2xl leading-none opacity-40">+</span>
+                    </button>
+                    <div class="faq-answer pb-8 md:pb-10">
+                        <p class="text-sm md:text-base leading-relaxed opacity-70">Retailers can place orders online on our website or visit one of our three full-scale showrooms. You may also contact your sales rep in your area and place your order directly through them.</p>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="faq-item">
+                    <button class="faq-question w-full flex items-center justify-between py-7 md:py-9 text-left gap-6" onclick="toggleFaq(this)">
+                        <h2 class="font-century text-lg md:text-xl leading-snug">How do I obtain product information and pricing?</h2>
+                        <span class="faq-icon text-2xl leading-none opacity-40">+</span>
+                    </button>
+                    <div class="faq-answer pb-8 md:pb-10">
+                        <p class="text-sm md:text-base leading-relaxed opacity-70">If you are a business or retailer, please <a href="#" class="underline underline-offset-2 opacity-100 hover:opacity-70 transition-opacity">contact us</a> and we will put you in contact with a sales rep in your area.</p>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="faq-item">
+                    <button class="faq-question w-full flex items-center justify-between py-7 md:py-9 text-left gap-6" onclick="toggleFaq(this)">
+                        <h2 class="font-century text-lg md:text-xl leading-snug">May I order online? How do I find out who my sales representative is?</h2>
+                        <span class="faq-icon text-2xl leading-none opacity-40">+</span>
+                    </button>
+                    <div class="faq-answer pb-8 md:pb-10">
+                        <div class="space-y-4 text-sm md:text-base leading-relaxed opacity-70">
+                            <p>Yes, absolutely, for businesses and retailers! If you are an existing customer, <a href="#" class="underline underline-offset-2 opacity-100 hover:opacity-70 transition-opacity">click here to login</a>. If you are a new customer, <a href="#" class="underline underline-offset-2 opacity-100 hover:opacity-70 transition-opacity">click here to register</a> for online access.</p>
+                            <p>If you are not a retailer and you are having trouble finding one of our products, we will be happy to refer you to a retailer in your area.</p>
+                            <p>Find your sales representative &mdash; <a href="#" class="underline underline-offset-2 opacity-100 hover:opacity-70 transition-opacity">Please contact us!</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="faq-item">
+                    <button class="faq-question w-full flex items-center justify-between py-7 md:py-9 text-left gap-6" onclick="toggleFaq(this)">
+                        <h2 class="font-century text-lg md:text-xl leading-snug">Where can I return one of the products I purchased or received as a gift?</h2>
+                        <span class="faq-icon text-2xl leading-none opacity-40">+</span>
+                    </button>
+                    <div class="faq-answer pb-8 md:pb-10">
+                        <p class="text-sm md:text-base leading-relaxed opacity-70">CTG products purchased or received as a gift should be returned to the store from which it was purchased. Returns and exchanges are subject to the store's returns and exchange policy.</p>
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="faq-item">
+                    <button class="faq-question w-full flex items-center justify-between py-7 md:py-9 text-left gap-6" onclick="toggleFaq(this)">
+                        <h2 class="font-century text-lg md:text-xl leading-snug">Do you sell your products directly to the public?</h2>
+                        <span class="faq-icon text-2xl leading-none opacity-40">+</span>
+                    </button>
+                    <div class="faq-answer pb-8 md:pb-10">
+                        <p class="text-sm md:text-base leading-relaxed opacity-70">CTG Brands, an importer &amp; distributor, sells directly to registered retailers. If you are a business or retailer, you can <a href="#" class="underline underline-offset-2 opacity-100 hover:opacity-70 transition-opacity">register with us</a> to purchase items.</p>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="faq-item">
+                    <button class="faq-question w-full flex items-center justify-between py-7 md:py-9 text-left gap-6" onclick="toggleFaq(this)">
+                        <h2 class="font-century text-lg md:text-xl leading-snug">What brands do you represent?</h2>
+                        <span class="faq-icon text-2xl leading-none opacity-40">+</span>
+                    </button>
+                    <div class="faq-answer pb-8 md:pb-10">
+                        <p class="text-sm md:text-base leading-relaxed opacity-70">CTG Brands has over 60 exclusive brands. Some of these are: BODICO, Canadian Souvenir, Country Garden, Deco-No&euml;l, Deco-Lite, Easter Treasures, From the Heart, FabDesign, iDesignGraphics, Ghostly Ghouls, iFocus Electronics, Home Essentials, Luciano Gourmet, Luciano Houseware, NordicTrail, OfficeWorks, PaperTrendz, Paws, Rain-Guard, PURE, Santa's Secrets, Sunny Dayz, Time 4 Crafts, Tootsie Baby and Woody's Stickers.</p>
+                    </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="faq-item">
+                    <button class="faq-question w-full flex items-center justify-between py-7 md:py-9 text-left gap-6" onclick="toggleFaq(this)">
+                        <h2 class="font-century text-lg md:text-xl leading-snug">Which stores carry your products?</h2>
+                        <span class="faq-icon text-2xl leading-none opacity-40">+</span>
+                    </button>
+                    <div class="faq-answer pb-8 md:pb-10">
+                        <p class="text-sm md:text-base leading-relaxed opacity-70">Our products are offered in thousands of stores throughout North America. If you are having trouble finding one of our items, we will be happy to refer you to a retailer in your area.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA BANNER -->
+        <section class="py-20 md:py-24 bg-white text-evergreen-dark">
+            <div class="container mx-auto px-6 text-center max-w-text-wide">
+                <h3 class="body12-caps mb-4">Still have questions?</h3>
+                <h2 class="font-century text-[24px] md:text-[36px] leading-tight mb-5">We're here to help. Reach out to our team and we'll get back to you promptly.</h2>
+                <a href="#" class="cta-compressed green">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-evergreen text-sand pt-14 pb-10">
+        <!-- Newsletter -->
+        <div class="container mx-auto px-6 md:px-10 mb-12 flex flex-col md:flex-row items-center justify-center gap-8 max-w-grid">
+            <p class="font-century text-xl md:text-2xl max-w-[500px] text-center md:text-left">Sign up for our eblasts and be the first to know about new products and special promotions</p>
+            <form class="w-full max-w-[420px] flex border border-sand/40 p-3 rounded-4">
+                <input type="email" placeholder="Enter your email to subscribe" class="bg-transparent border-none outline-none flex-1 placeholder-sand/60 text-sand text-sm">
+                <button type="submit" class="body12-caps ml-4 hover:opacity-70 transition-opacity">Subscribe</button>
+            </form>
+        </div>
+
+        <!-- Footer Nav -->
+        <div class="border-t border-sand/20 pt-10">
+            <div class="container mx-auto px-6 md:px-10 max-w-grid">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
+                    <!-- Col 1 -->
+                    <div>
+                        <h4 class="body12-caps mb-6 opacity-60">General</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">New Releases</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Contact</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Terms of Use</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Privacy Policy</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Accessibility</a></li>
+                        </ul>
+                    </div>
+                    <!-- Col 2 -->
+                    <div>
+                        <h4 class="body12-caps mb-6 opacity-60">Featured</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Everyday</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Seasonal</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Home Décor</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Brands</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">News</a></li>
+                        </ul>
+                    </div>
+                    <!-- Col 3 -->
+                    <div>
+                        <h4 class="body12-caps mb-6 opacity-60">Resources</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">New Customers & Forms</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Become a Supplier</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Careers</a></li>
+                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity opacity-100 font-normal">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <!-- Col 4 - Social -->
+                    <div>
+                        <h4 class="body12-caps mb-6 opacity-60">Connect</h4>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-white/10 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-white/10 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.83-48.3 93.96 0 111.28 61.9 111.28 142.3V448z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-white/10 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.6-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8z"/></svg>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-white/10 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom bar -->
+                <div class="border-t border-sand/20 pt-8 text-center">
+                    <p class="text-xs opacity-50">&copy; CTG Brands Inc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <div id="scrollToTop" class="scroll-to-top">
+        <a href="#" onclick="scrollToTop();return false;" class="bg-white/95 shadow-lg rounded-full w-12 h-12 flex items-center justify-center text-evergreen-dark hover:shadow-xl transition-shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // FAQ accordion
+        function toggleFaq(button) {
+            const item = button.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+
+            // Close all items
+            document.querySelectorAll('.faq-item').forEach(function(el) {
+                el.classList.remove('open');
+            });
+
+            // Open clicked item (if it wasn't already open)
+            if (!isOpen) {
+                item.classList.add('open');
+            }
+        }
+
+        // Mobile menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        document.getElementById('mobileMenuClose').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+
+        // Scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('scrollToTop');
+            if (btn) {
+                if (window.pageYOffset > 300) {
+                    btn.classList.add('show');
+                } else {
+                    btn.classList.remove('show');
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

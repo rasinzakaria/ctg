@@ -218,6 +218,44 @@
         .footer-logo { opacity: 0.15; transition: opacity 0.3s ease; }
         .footer-logo:hover { opacity: 0.3; }
 
+        /* --- GLOBAL FIXES START --- */
+
+        /* 1. Reduce text size globally by ~2px, but KEEP buttons (cta-compressed) same size */
+        body, p, li, a {
+            font-size: 14px; /* Reduced from default 16px */
+        }
+        h1, .text-\[34px\], .text-\[52px\] { font-size: 95%; } /* Scale down headers slightly */
+        h2, .text-\[28px\], .text-\[40px\] { font-size: 95%; }
+        h3, .text-2xl, .text-3xl { font-size: 95%; }
+
+        /* Force buttons to keep their readable size */
+        .cta-compressed, button, .btn {
+            font-size: 13px !important; 
+        }
+
+        /* 2. Fix Footer Icons (Instagram Blob Issue) */
+        /* This forces the SVGs in the footer "Connect" section to stay square */
+        .footer-icon-fix svg {
+            width: 16px !important;
+            height: 16px !important;
+            min-width: 16px;
+            min-height: 16px;
+            object-fit: contain;
+        }
+
+        /* 3. About Page Image Alignment Fix */
+        .about-image-container {
+            height: 100%;
+            display: flex;
+        }
+        .about-image-container img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover; /* Ensures image stretches to match text height */
+        }
+
+        /* --- GLOBAL FIXES END --- */
+
     </style>
 </head>
 <body class="bg-wheat text-evergreen-dark antialiased">

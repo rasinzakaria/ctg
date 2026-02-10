@@ -310,6 +310,12 @@ footer .font-heading.text-xl.md\:text-2xl {
     }
 }
 
+        .nav-item {
+        white-space: nowrap;      /* Keep on one line */
+        overflow: hidden;         /* Hide the overflow */
+        text-overflow: ellipsis;  /* Add "..." at the end */
+        max-width: 150px;         /* You must set a width for this to work */
+        }
 
     </style>
 </head>
@@ -666,7 +672,7 @@ footer .font-heading.text-xl.md\:text-2xl {
         </section>
 
         <!-- FEATURED IMAGES -->
-        <section class="bg-wheat">
+        <section class="bg-wheat" style="display: none">
             <div class="grid grid-cols-1 md:grid-cols-2">
                 <!-- True North -->
                 <a href="#" class="group relative block overflow-hidden featured-hover">

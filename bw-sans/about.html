@@ -318,6 +318,24 @@ footer .font-heading.text-xl.md\:text-2xl {
         max-width: 150px;         /* You must set a width for this to work */
         }
     }
+
+        /* About / editorial */
+        .heading-editorial { font-style: italic; letter-spacing: -0.01em; }
+        .img-caption { font-size: 11px; font-style: italic; opacity: 0.38; margin-top: 0.75rem; line-height: 1.5; }
+        .body-editorial { font-size: 15px; line-height: 1.85; opacity: 0.6; }
+        @media (min-width: 768px) { .body-editorial { font-size: 16px; line-height: 1.9; } }
+        .intro-editorial { font-size: 17px; line-height: 1.8; opacity: 0.65; }
+        @media (min-width: 768px) { .intro-editorial { font-size: 19px; line-height: 1.75; } }
+        .pull-quote {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-size: 20px; line-height: 1.5; font-style: italic;
+            border-left: 1.5px solid rgba(20, 20, 20, 0.15);
+            padding-left: 1.5rem; margin: 2.5rem 0; opacity: 0.75;
+        }
+        @media (min-width: 768px) { .pull-quote { font-size: 22px; padding-left: 2rem; margin: 3rem 0; } }
+        .img-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+        @media (min-width: 768px) { .img-pair { gap: 1.25rem; } }
+        .img-pair img { width: 100%; height: 100%; object-fit: cover; display: block; }
     </style>
 </head>
 <body class="bg-wheat text-evergreen-dark antialiased">

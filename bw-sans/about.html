@@ -342,13 +342,16 @@ footer .font-heading.text-xl.md\:text-2xl {
 
     <!-- HEADER -->
     <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 py-4 md:pt-8 md:pb-4 header-scrolled">
-        <nav class="relative mx-auto flex items-center justify-between px-6 md:px-10 max-w-grid text-evergreen-dark">
+        <nav class="relative mx-auto flex items-center justify-between px-6 md:px-10 max-w-grid text-sand">
+            <!-- Mobile menu button -->
             <button id="mobileMenuBtn" class="md:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
-            <ul class="hidden md:flex flex-1 justify-start body12-caps gap-8 items-center">
+
+            <!-- Left nav -->
+            <ul class="hidden md:flex flex-1 justify-start body12-caps gap-4 items-center">
                 <li><a href="#" class="hover:opacity-70 transition-opacity">Everyday</a></li>
                 <li><a href="#" class="hover:opacity-70 transition-opacity">Seasonal</a></li>
                 <li><a href="#" class="hover:opacity-70 transition-opacity">Home Décor</a></li>
@@ -356,19 +359,25 @@ footer .font-heading.text-xl.md\:text-2xl {
                 <li><a href="#" class="hover:opacity-70 transition-opacity">Catalogs</a></li>
                 <li><a href="#" class="hover:opacity-70 transition-opacity">Sale</a></li>
             </ul>
+
+            <!-- Logo -->
             <a href="index.html" class="flex-shrink-0 mx-auto">
-                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands logo" class="h-10 md:h-12 w-auto" />
+                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands logo" class="h-10 md:h-12 w-auto logo-light brightness-0 invert" />
+                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands logo" class="h-10 md:h-12 w-auto logo-dark hidden" />
             </a>
-            <ul class="hidden md:flex flex-1 justify-end body12-caps gap-8 items-center">
-                <li><a href="about.html" class="hover:opacity-70 transition-opacity opacity-100 font-medium">Our Story</a></li>
-                <li><a href="#" class="hover:opacity-70 transition-opacity">Become A Retailer</a></li>
-                <li><a href="#" class="hover:opacity-70 transition-opacity">Devenir Détaillant</a></li>
+
+            <!-- Right nav -->
+            <ul class="hidden md:flex flex-1 justify-end body12-caps gap-4 items-center">
+                <li><a href="about.html" class="hover:opacity-70 transition-opacity">Our Story</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Become A Retailer | Devenir Détaillant</a></li>
                 <li><a href="#" class="hover:opacity-70 transition-opacity">Cart (0)</a></li>
-                <li><a href="#" class="cta-compressed green hover:opacity-70 transition-all">Login</a></li>
+                <li><a href="#" class="cta-compressed transparent hover:bg-white/20 transition-all">Login</a></li>
             </ul>
+
+            <!-- Mobile cart icon -->
             <a href="#" class="md:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/>
                 </svg>
             </a>
         </nav>

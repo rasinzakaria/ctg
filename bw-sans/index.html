@@ -286,6 +286,31 @@
         /* Make every italicized font regular */
         * { font-style: normal !important; }
 
+        /* --- PASTE THIS INTO YOUR <STYLE> SECTION --- */
+
+
+
+/* 2. Fix Footer Icons (The "Blob" Fix) */
+.footer-icon-fix svg {
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px;
+    min-height: 16px;
+    object-fit: contain;
+}
+
+/* 3. Eblasts Text Sizing (Make it smaller as requested) */
+footer .font-heading.text-xl.md\:text-2xl {
+    font-size: 1.125rem; /* Equivalent to text-lg */
+    line-height: 1.5;
+}
+@media (min-width: 768px) {
+    footer .font-heading.text-xl.md\:text-2xl {
+        font-size: 1.25rem; /* Equivalent to text-xl */
+    }
+}
+
+
     </style>
 </head>
 <body class="bg-wheat text-evergreen-dark antialiased">

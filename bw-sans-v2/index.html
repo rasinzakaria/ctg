@@ -283,6 +283,27 @@
             margin: 0 auto;
         }
 
+        /* ── Global text sizing reduction (2-3px) ── */
+        /* Does NOT affect .cta-compressed or .body12-caps buttons */
+        h1, h2, h3, h4, h5, h6, p, li, blockquote, figcaption, span:not(.cta-compressed):not(.body12-caps) {
+            /* handled via inline class overrides below */
+        }
+
+        /* Carousel auto-scroll animation */
+        @keyframes carouselScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .carousel-track-auto {
+            display: flex;
+            gap: 30px;
+            animation: carouselScroll 40s linear infinite;
+            width: max-content;
+        }
+        .carousel-track-auto:hover {
+            animation-play-state: paused;
+        }
+
     </style>
 </head>
 <body class="bg-wheat text-evergreen-dark antialiased">
@@ -316,8 +337,8 @@
             <!-- Right nav -->
             <ul class="hidden md:flex flex-1 justify-end body12-caps gap-8 items-center">
                 <li><a href="about.html" class="hover:opacity-70 transition-opacity">Our Story</a></li>
-                <li><a href="#" class="hover:opacity-70 transition-opacity">Become A Retailer</a></li>
-                <li><a href="#" class="hover:opacity-70 transition-opacity">Devenir Détaillant</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Become a Retailer</a></li>
+                <li><a href="#" class="hover:opacity-70 transition-opacity">Devenir détaillant</a></li>
                 <li><a href="#" class="hover:opacity-70 transition-opacity">Cart (0)</a></li>
                 <li><a href="#" class="cta-compressed transparent hover:bg-white/20 transition-all">Login</a></li>
             </ul>
@@ -334,7 +355,7 @@
     <!-- Mobile Menu Overlay -->
     <div id="mobileMenu" class="fixed inset-0 z-[60] bg-evergreen-dark text-sand hidden">
         <div class="flex justify-between items-center p-6">
-            <span class="body12-caps">Menu.</span>
+            <span class="body12-caps">Menu</span>
             <button id="mobileMenuClose">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
@@ -365,10 +386,10 @@
             </div>
             <div class="container relative z-10 mx-auto px-6 md:px-10 py-16 md:py-20 flex flex-col md:flex-row justify-between items-end w-full max-w-grid">
                 <div class="flex flex-col max-w-text-wide text-sand mb-12 md:mb-0">
-                    <h3 class="body12-caps mb-4 hero-label">Your Partner in Product Solutions.</h3>
-                    <h1 class="font-heading text-[32px] md:text-[52px] leading-tight mb-6 hero-title">One destination.<br>Endless wholesale possibilities.</h1>
+                    <h3 class="body12-caps mb-4 hero-label">Your Partner in Product Solutions</h3>
+                    <h1 class="font-heading text-[30px] md:text-[49px] leading-tight mb-6 hero-title">One destination.<br>Endless wholesale possibilities.</h1>
                     <div class="hero-cta">
-                        <a href="#" class="cta-compressed transparent">Become Our Customer</a>
+                        <a href="#" class="cta-compressed transparent">Become our customer</a>
                     </div>
                 </div>
                 <!-- Scroll indicator -->
@@ -384,9 +405,9 @@
         <!-- TRENDING CATEGORIES -->
         <section class="py-20 md:py-28 text-evergreen-dark bg-white">
             <div class="container mx-auto px-6 text-center max-w-text-wide mb-14 md:mb-20 reveal">
-                <h3 class="body12-caps mb-4">Trending Categories.</h3>
-                <h2 class="font-heading text-[24px] md:text-[32px] leading-tight mb-8">Seasonal must-haves and everyday essentials, thoughtfully curated for every retail moment.</h2>
-                <a href="#" class="cta-compressed green">Explore Collections</a>
+                <h3 class="body12-caps mb-4">Trending Categories</h3>
+                <h2 class="font-heading text-[22px] md:text-[29px] leading-tight mb-8">Seasonal must-haves and everyday essentials, thoughtfully curated for every retail moment.</h2>
+                <a href="#" class="cta-compressed green">Explore collections</a>
             </div>
 
             <div class="container mx-auto px-6 md:px-10 max-w-grid">
@@ -396,18 +417,18 @@
                         <div class="aspect-[4/3] overflow-hidden rounded-4 mb-6">
                             <img src="https://www.ctgbrands.com/media/1470/seasonal-9.png" class="w-full h-full object-cover" alt="Seasonal Collection">
                         </div>
-                        <h3 class="font-heading text-2xl md:text-3xl mb-2">Seasonal Collection</h3>
-                        <p class="font-light text-sm md:text-base opacity-80 mb-3 max-w-md">Seasonal must-haves, designed for every key holiday moment.</p>
-                        <span class="body12-caps opacity-60 group-hover:opacity-100 transition-opacity">Shop Seasonal</span>
+                        <h3 class="font-heading text-xl md:text-[26px] mb-2">Seasonal Collection</h3>
+                        <p class="font-light text-xs md:text-sm opacity-80 mb-4 max-w-md">Seasonal must-haves, designed for every key holiday moment.</p>
+                        <a href="#" class="cta-compressed green">Shop Seasonal</a>
                     </a>
                     <!-- Everyday -->
                     <a href="#" class="group block overlay-card-hover">
                         <div class="aspect-[4/3] overflow-hidden rounded-4 mb-6">
                             <img src="https://www.ctgbrands.com/media/1469/everyday-9.png" class="w-full h-full object-cover" alt="Everyday Collection">
                         </div>
-                        <h3 class="font-heading text-2xl md:text-3xl mb-2">Everyday Collection</h3>
-                        <p class="font-light text-sm md:text-base opacity-80 mb-3 max-w-md">Core essentials, thoughtfully curated for everyday demand.</p>
-                        <span class="body12-caps opacity-60 group-hover:opacity-100 transition-opacity">Shop Collection</span>
+                        <h3 class="font-heading text-xl md:text-[26px] mb-2">Everyday Collection</h3>
+                        <p class="font-light text-xs md:text-sm opacity-80 mb-4 max-w-md">Core essentials, thoughtfully curated for everyday demand.</p>
+                        <a href="#" class="cta-compressed green">Everyday Collection</a>
                     </a>
                 </div>
             </div>
@@ -417,8 +438,6 @@
         <section class="bg-evergreen-dark text-sand py-20 md:py-28">
             <!-- Home Décor -->
             <div class="container mx-auto px-6 text-center max-w-text-wide mb-14 md:mb-20 reveal">
-                <h3 class="body12-caps mb-4">Home Décor.</h3>
-                <h2 class="font-heading text-3xl md:text-4xl">Beautiful spaces start with thoughtful details.</h2>
             </div>
 
             <div class="container mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-grid">
@@ -429,7 +448,7 @@
                     </div>
                     <div class="px-2">
                         <h3 class="body12-caps mb-2">Kiera Grace</h3>
-                        <p class="font-heading text-lg">Frames, shelves, and home accents designed with modern elegance.</p>
+                        <p class="font-heading text-base">Frames, shelves, and home accents designed with modern elegance</p>
                     </div>
                 </div>
 
@@ -440,7 +459,7 @@
                     </div>
                     <div class="px-2">
                         <h3 class="body12-caps mb-2">Truu Design</h3>
-                        <p class="font-heading text-lg">Wall décor and statement pieces that transform any room.</p>
+                        <p class="font-heading text-base">Wall décor and statement pieces that transform any room</p>
                     </div>
                 </div>
 
@@ -451,7 +470,7 @@
                     </div>
                     <div class="px-2">
                         <h3 class="body12-caps mb-2">Enlighten</h3>
-                        <p class="font-heading text-lg">Candles and lighting that set the perfect ambiance.</p>
+                        <p class="font-heading text-base">Candles and lighting that set the perfect ambiance</p>
                     </div>
                 </div>
             </div>
@@ -460,7 +479,7 @@
             <div class="container mx-auto px-6 md:px-10 max-w-grid mt-20 md:mt-28 reveal">
                 <div class="bg-evergreen rounded-4 p-8 md:p-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                     <div class="md:col-span-6 order-2 md:order-1">
-                        <h2 class="font-heading text-xl md:text-2xl leading-snug">We bring years of wholesale expertise together with a hands-on, partner-first approach. From sourcing to fulfillment, we deliver clarity, speed, and market insight at every stage.</h2>
+                        <h2 class="font-heading text-lg md:text-xl leading-snug">We bring years of wholesale expertise together with a hands-on, partner-first approach. From sourcing to fulfillment, we deliver clarity, speed, and market insight at every stage.</h2>
                     </div>
                     <div class="md:col-span-3 order-1 md:order-2 flex justify-center">
                         <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands" class="w-28 h-auto brightness-0 invert opacity-40">
@@ -476,8 +495,6 @@
         <section class="py-20 md:py-28 bg-white text-evergreen-dark">
             <div class="container mx-auto px-6 md:px-10 max-w-grid">
                 <div class="text-center mb-14 md:mb-20 reveal">
-                    <h3 class="body12-caps mb-4">Trending Brands.</h3>
-                    <h2 class="font-heading text-[28px] md:text-[36px] leading-tight mx-auto max-w-text-wide">Brands your customers already love.</h2>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
@@ -486,8 +503,8 @@
                         <div class="aspect-[4/3] overflow-hidden rounded-4 mb-6">
                             <img src="https://www.ctgbrands.com/media/1472/luciano-9.png" class="w-full h-full object-cover" alt="Luciano">
                         </div>
-                        <h3 class="font-heading text-2xl md:text-3xl mb-2">Luciano</h3>
-                        <p class="font-light text-sm md:text-base opacity-80 mb-3 max-w-md">Premium kitchen essentials, made to last.</p>
+                        <h3 class="font-heading text-xl md:text-[26px] mb-2">Luciano</h3>
+                        <p class="font-light text-xs md:text-sm opacity-80 mb-3 max-w-md">Premium kitchen essentials, made to last.</p>
                         <span class="body12-caps opacity-60 group-hover:opacity-100 transition-opacity">Shop Now</span>
                     </a>
                     <!-- Bodico -->
@@ -495,8 +512,8 @@
                         <div class="aspect-[4/3] overflow-hidden rounded-4 mb-6">
                             <img src="https://www.ctgbrands.com/media/1471/bodico-9.png" class="w-full h-full object-cover" alt="Bodico">
                         </div>
-                        <h3 class="font-heading text-2xl md:text-3xl mb-2">Bodico</h3>
-                        <p class="font-light text-sm md:text-base opacity-80 mb-3 max-w-md">Everyday bathroom essentials, done better.</p>
+                        <h3 class="font-heading text-xl md:text-[26px] mb-2">Bodico</h3>
+                        <p class="font-light text-xs md:text-sm opacity-80 mb-3 max-w-md">Everyday bathroom essentials, done better.</p>
                         <span class="body12-caps opacity-60 group-hover:opacity-100 transition-opacity">Shop Now</span>
                     </a>
                 </div>
@@ -507,12 +524,12 @@
         <section class="py-14 md:py-20 bg-evergreen-dark text-sand">
             <div class="container mx-auto px-6 md:px-10 max-w-grid">
                 <div class="text-center mb-10 reveal">
-                    <h2 class="font-heading text-3xl md:text-4xl">Our Brands.</h2>
+                    <h2 class="font-heading text-[26px] md:text-[34px]">Our Brands</h2>
                 </div>
 
                 <div class="relative">
                     <div class="overflow-hidden" id="brandsCarousel">
-                        <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-track-auto" id="carouselTrack">
                             <div class="flex-shrink-0 w-[140px] h-[80px] flex items-center justify-center bg-white/10 rounded-4 p-4">
                                 <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTI1Ni8yLWJldHRlci1iYnEtMDkxNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3513=/media/1256/2-better-bbq-0914.png" alt="Better BBQs" class="max-w-full max-h-full object-contain brightness-0 invert opacity-80">
                             </div>
@@ -632,8 +649,7 @@
                             </div>
                         </div>
                     </div>
-                    <button onclick="moveCarousel(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center text-sand hover:bg-white/10 transition-colors text-xl">&#8249;</button>
-                    <button onclick="moveCarousel(1)" class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center text-sand hover:bg-white/10 transition-colors text-xl">&#8250;</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -648,7 +664,7 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     <div class="absolute bottom-8 left-8 right-8 text-sand">
-                        <h3 class="font-heading text-2xl md:text-3xl mb-3">True North</h3>
+                        <h3 class="font-heading text-xl md:text-[26px] mb-3">True North</h3>
                         <span class="cta-compressed transparent text-sm">Shop Now</span>
                     </div>
                 </a>
@@ -659,8 +675,8 @@
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     <div class="absolute bottom-8 left-8 right-8 text-sand">
-                        <h3 class="font-heading text-2xl md:text-3xl mb-1">Easter</h3>
-                        <p class="font-light text-sm mb-3 opacity-90">Spring Has Officially Sprung.</p>
+                        <h3 class="font-heading text-xl md:text-[26px] mb-1">Easter</h3>
+                        <p class="font-light text-sm mb-3 opacity-90">Spring Has Officially Sprung</p>
                         <span class="cta-compressed transparent text-sm">Shop Now</span>
                     </div>
                 </a>
@@ -670,9 +686,8 @@
         <!-- CTA BANNER -->
         <section class="py-20 md:py-24 bg-white text-evergreen-dark">
             <div class="container mx-auto px-6 text-center max-w-text-wide reveal">
-                <h3 class="body12-caps mb-4">Get Started.</h3>
-                <h2 class="font-heading text-[24px] md:text-[36px] leading-tight mb-5">Create your account today and connect with one of our sales experts.</h2>
-                <p class="font-light text-base md:text-lg mb-8 opacity-80 leading-relaxed">With a strong track record across North America and a focus on long-term relationships, we don't just supply products — we support sustainable growth, season after season.</p>
+                <h2 class="font-heading text-[22px] md:text-[33px] leading-tight mb-5">Create your account today and connect with one of our sales experts.</h2>
+                <p class="font-light text-sm md:text-base mb-8 opacity-80 leading-relaxed">With a strong track record across North America and a focus on long-term relationships, we don't just supply products — we support sustainable growth, season after season.</p>
                 <a href="#" class="cta-compressed green">Sign Up Now</a>
             </div>
         </section>
@@ -688,9 +703,9 @@
         </div>
         <!-- Newsletter -->
         <div class="container mx-auto px-6 md:px-10 mb-12 flex flex-col md:flex-row items-center justify-center gap-8 max-w-grid">
-            <p class="font-heading text-xl md:text-2xl max-w-[500px] text-center md:text-left">Sign up for our eblasts and be the first to know about new products and special promotions.</p>
+            <p class="font-heading text-base md:text-lg max-w-[500px] text-center md:text-left">Sign up for our eblasts and be the first to know about new products and special promotions</p>
             <form class="w-full max-w-[420px] flex border border-sand/40 p-3 rounded-4">
-                <input type="email" placeholder="Enter your email to subscribe" class="bg-transparent border-none outline-none flex-1 placeholder-sand/60 text-sand text-sm">
+                <input type="email" placeholder="Enter your email to subscribe" class="bg-transparent border-none outline-none flex-1 placeholder-sand/60 text-sand text-xs">
                 <button type="submit" class="body12-caps ml-4 hover:opacity-70 transition-opacity">Subscribe</button>
             </form>
         </div>
@@ -701,40 +716,40 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
                     <!-- Col 1 -->
                     <div>
-                        <h4 class="body12-caps mb-6 opacity-60">General.</h4>
+                        <h4 class="body12-caps mb-6 opacity-60">General</h4>
                         <ul class="space-y-3">
-                            <li><a href="about.html" class="font-light text-sm hover:opacity-70 transition-opacity">Our Story</a></li>
-                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">New Releases</a></li>
-                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Contact</a></li>
-                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Terms of Use</a></li>
-                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Privacy Policy</a></li>
-                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Accessibility</a></li>
+                            <li><a href="about.html" class="font-light text-xs hover:opacity-70 transition-opacity">Our Story</a></li>
+                            <li><a href="#" class="font-light text-xs hover:opacity-70 transition-opacity">New Releases</a></li>
+                            <li><a href="#" class="font-light text-xs hover:opacity-70 transition-opacity">Contact</a></li>
+                            <li><a href="#" class="font-light text-xs hover:opacity-70 transition-opacity">Terms of Use</a></li>
+                            <li><a href="#" class="font-light text-xs hover:opacity-70 transition-opacity">Privacy Policy</a></li>
+                            <li><a href="#" class="font-light text-xs hover:opacity-70 transition-opacity">Accessibility</a></li>
                         </ul>
                     </div>
                     <!-- Col 2 -->
                     <div>
-                        <h4 class="body12-caps mb-6 opacity-60">Featured.</h4>
+                        <h4 class="body12-caps mb-6 opacity-60">Featured</h4>
                         <ul class="space-y-3">
-                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Everyday</a></li>
-                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Seasonal</a></li>
-                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Home Décor</a></li>
-                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Brands</a></li>
-                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">News</a></li>
+                            <li><a href="#" class="font-light text-xs hover:opacity-70 transition-opacity">Everyday</a></li>
+                            <li><a href="#" class="font-light text-xs hover:opacity-70 transition-opacity">Seasonal</a></li>
+                            <li><a href="#" class="font-light text-xs hover:opacity-70 transition-opacity">Home Décor</a></li>
+                            <li><a href="#" class="font-light text-xs hover:opacity-70 transition-opacity">Brands</a></li>
+                            <li><a href="#" class="font-light text-xs hover:opacity-70 transition-opacity">News</a></li>
                         </ul>
                     </div>
                     <!-- Col 3 -->
                     <div>
-                        <h4 class="body12-caps mb-6 opacity-60">Resources.</h4>
+                        <h4 class="body12-caps mb-6 opacity-60">Resources</h4>
                         <ul class="space-y-3">
-                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">New Customers &amp; Forms</a></li>
-                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Become A Supplier</a></li>
-                            <li><a href="#" class="font-light text-sm hover:opacity-70 transition-opacity">Careers</a></li>
-                            <li><a href="faq.html" class="font-light text-sm hover:opacity-70 transition-opacity">FAQ</a></li>
+                            <li><a href="#" class="font-light text-xs hover:opacity-70 transition-opacity">New Customers & Forms</a></li>
+                            <li><a href="#" class="font-light text-xs hover:opacity-70 transition-opacity">Become a Supplier</a></li>
+                            <li><a href="#" class="font-light text-xs hover:opacity-70 transition-opacity">Careers</a></li>
+                            <li><a href="faq.html" class="font-light text-xs hover:opacity-70 transition-opacity">FAQ</a></li>
                         </ul>
                     </div>
                     <!-- Col 4 - Social -->
                     <div>
-                        <h4 class="body12-caps mb-6 opacity-60">Connect.</h4>
+                        <h4 class="body12-caps mb-6 opacity-60">Connect</h4>
                         <div class="flex gap-4">
                             <a href="#" class="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-white/10 transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
@@ -743,7 +758,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.83-48.3 93.96 0 111.28 61.9 111.28 142.3V448z"/></svg>
                             </a>
                             <a href="#" class="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-white/10 transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.6-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 448 512" style="width:16px;height:16px;"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.6-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8z"/></svg>
                             </a>
                             <a href="#" class="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-white/10 transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
@@ -763,7 +778,7 @@
     <!-- ANNOUNCEMENT BANNER -->
     <div class="announcement-bar bg-evergreen-dark text-sand py-3 px-4 text-center" id="announcementBanner">
         <button onclick="closeBanner()" class="absolute right-4 top-1/2 -translate-y-1/2 body12-caps opacity-70 hover:opacity-100 transition-opacity">&#10005;</button>
-        <a href="#" class="body12-caps hover:opacity-70 transition-opacity">Contact your sales rep today to book your January Open House appointment.</a>
+        <a href="#" class="body12-caps hover:opacity-70 transition-opacity">Contact your sales rep today to book your January Open House appointment!</a>
     </div>
 
     <!-- SCROLL TO TOP -->
@@ -812,19 +827,14 @@
             }
         });
 
-        // Brands carousel
-        let carouselPosition = 0;
-        const carouselTrack = document.getElementById('carouselTrack');
-        const brandLogos = carouselTrack ? carouselTrack.children : [];
-
-        function moveCarousel(direction) {
-            if (!carouselTrack || brandLogos.length === 0) return;
-            const logoWidth = brandLogos[0].offsetWidth + 30;
-            const maxPosition = Math.max(0, (brandLogos.length - 4) * logoWidth);
-            carouselPosition += direction * logoWidth * 2;
-            carouselPosition = Math.max(0, Math.min(carouselPosition, maxPosition));
-            carouselTrack.style.transform = `translateX(-${carouselPosition}px)`;
-        }
+        // Brands carousel - auto-scroll infinite loop
+        document.addEventListener('DOMContentLoaded', function() {
+            var track = document.getElementById('carouselTrack');
+            if (track) {
+                // Duplicate all items for seamless infinite scroll
+                track.innerHTML += track.innerHTML;
+            }
+        });
 
         // Scroll to top
         function scrollToTop() {

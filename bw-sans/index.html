@@ -552,6 +552,20 @@
             carouselTrack.style.transform = `translateX(-${carouselPosition}px)`;
         }
 
+        // Auto-advance brands carousel every 3s, loop back at end
+        if (carouselTrack && brandLogos.length > 0) {
+            setInterval(function() {
+                const logoWidth = brandLogos[0].offsetWidth + 30;
+                const maxPosition = Math.max(0, (brandLogos.length - 4) * logoWidth);
+                if (carouselPosition >= maxPosition) {
+                    carouselPosition = 0;
+                    carouselTrack.style.transform = `translateX(-${carouselPosition}px)`;
+                } else {
+                    moveCarousel(1);
+                }
+            }, 3000);
+        }
+
         // Scroll to top
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });

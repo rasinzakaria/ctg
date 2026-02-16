@@ -128,21 +128,21 @@ body {
     flex-wrap: nowrap;
 }
 
-/* Header scroll state */
-.header-scrolled {
+/* Header — always white (no scroll-dependent change) */
+#mainHeader {
     background-color: rgba(245, 245, 245, 0.97) !important;
     backdrop-filter: blur(10px);
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
-.header-scrolled nav {
+#mainHeader nav {
     color: #141414 !important;
 }
-.header-scrolled .cta-compressed.transparent {
+#mainHeader .cta-compressed.transparent {
     border-color: #141414;
     color: #141414;
 }
-.header-scrolled .logo-light { display: none; }
-.header-scrolled .logo-dark { display: block !important; }
+#mainHeader .logo-light { display: none; }
+#mainHeader .logo-dark { display: block !important; }
 
 /* Keyframes */
 @keyframes fadeInUp {

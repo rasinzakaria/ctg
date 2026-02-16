@@ -164,6 +164,7 @@ body {
 }
 
 /* Refined CTA hovers */
+/* Same hover effect for all: fill with bg, invert text */
 .cta-compressed.green:hover {
     background-color: #141414;
     color: #f5f5f5;
@@ -171,11 +172,15 @@ body {
     opacity: 1;
 }
 .cta-compressed.transparent:hover {
-    background-color: rgba(255,255,255,0.12);
+    background-color: #f5f5f5;
+    color: #141414;
+    border-color: #f5f5f5;
     opacity: 1;
 }
 .cta-compressed.dark:hover {
-    background-color: #333;
+    background-color: #2d2d2d;
+    color: #f5f5f5;
+    border-color: #2d2d2d;
     opacity: 1;
 }
 

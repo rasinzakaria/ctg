@@ -130,16 +130,18 @@
             <div class="mx-auto max-w-content px-4 md:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12">
 
-                    <!-- IMAGE GALLERY -->
-                    <div class="md:col-span-7">
-                        <div class="relative">
-                            <span class="badge-new absolute top-4 left-4 z-10">New</span>
+                    <!-- IMAGE GALLERY (half width on desktop, thumbnails left of main image) -->
+                    <div class="md:col-span-6">
+                        <div class="flex flex-col md:flex-row md:flex-row-reverse gap-3 items-start">
                             <!-- Main image -->
-                            <div class="aspect-square bg-white rounded-4 overflow-hidden mb-3" id="mainImageWrap">
-                                <img id="mainImage" src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTM4My8xMDAtcGxhLWJpb2RlZ3JhbmRhYmxlLXN0cmF3cy0yMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3691=/media/1383/100-pla-biodegrandable-straws-20.png" alt="S.Secret Xmas Dachshund & Bows print Cellulose Dish Cloth" class="w-full h-full object-contain p-4">
+                            <div class="relative w-full flex-1 min-w-0">
+                                <span class="badge-new absolute top-4 left-4 z-10">New</span>
+                                <div class="aspect-square bg-white rounded-4 overflow-hidden" id="mainImageWrap">
+                                    <img id="mainImage" src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTM4My8xMDAtcGxhLWJpb2RlZ3JhbmRhYmxlLXN0cmF3cy0yMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3691=/media/1383/100-pla-biodegrandable-straws-20.png" alt="S.Secret Xmas Dachshund & Bows print Cellulose Dish Cloth" class="w-full h-full object-contain p-4">
+                                </div>
                             </div>
-                            <!-- Thumbnails -->
-                            <div class="flex gap-2">
+                            <!-- Thumbnails (left of main image on desktop) -->
+                            <div class="flex flex-row md:flex-col gap-2 shrink-0">
                                 <button class="thumb active w-16 h-16 md:w-20 md:h-20 bg-white rounded-4 overflow-hidden p-1" onclick="selectThumb(this, 'https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTM4My8xMDAtcGxhLWJpb2RlZ3JhbmRhYmxlLXN0cmF3cy0yMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3691=/media/1383/100-pla-biodegrandable-straws-20.png')">
                                     <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTM4My8xMDAtcGxhLWJpb2RlZ3JhbmRhYmxlLXN0cmF3cy0yMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiY292ZXIifX19?3691=/media/1383/100-pla-biodegrandable-straws-20.png" class="w-full h-full object-contain" alt="View 1">
                                 </button>
@@ -151,7 +153,7 @@
                     </div>
 
                     <!-- PRODUCT INFO -->
-                    <div class="md:col-span-5">
+                    <div class="md:col-span-6">
 
                         <!-- Title -->
                         <h1 class="font-heading text-[22px] md:text-[28px] leading-snug heading-editorial mt-3 mb-4">S.Secret Xmas Dachshund &amp; Bows print Cellulose Dish Cloth, 2/$</h1>

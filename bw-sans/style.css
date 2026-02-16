@@ -361,8 +361,18 @@ footer .font-heading.text-xl.md\:text-2xl {
 .product-card:hover { transform: translateY(-3px); }
 .product-card img { transition: transform 0.5s ease; }
 .product-card:hover img { transform: scale(1.03); }
-.info-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid rgba(20,20,20,0.06); }
+.info-row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(20,20,20,0.06);
+    text-align: left;
+}
 .info-row:last-child { border-bottom: none; }
+.info-row > *:first-child { min-width: 0; }
+.info-row > *:last-child { min-width: 0; justify-self: start; }
 
 /* ---------- About / editorial ---------- */
 .heading-editorial { font-style: italic; letter-spacing: -0.01em; }

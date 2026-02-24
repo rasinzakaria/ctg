@@ -253,15 +253,14 @@ body {
 }
 
 * { font-style: normal !important; }
+.italic, em, cite, .heading-editorial, .img-caption, .pull-quote { font-style: italic !important; }
+.not-italic { font-style: normal !important; }
 
 /* Footer border color (overrides global) */
 footer,
 footer *,
 footer *::before,
 footer *::after {
-    border-color: #e5e7eb !important;
-}
-footer .border-t.border-sand\/20 {
     border-color: #e5e7eb !important;
 }
 

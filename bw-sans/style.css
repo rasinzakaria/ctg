@@ -261,6 +261,9 @@ footer *::before,
 footer *::after {
     border-color: #e5e7eb !important;
 }
+footer .border-t.border-sand\/20 {
+    border-color: #e5e7eb !important;
+}
 
 /* Footer icons */
 .footer-icon-fix svg {

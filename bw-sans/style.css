@@ -367,7 +367,7 @@ footer .font-heading.text-xl.md\:text-2xl {
     gap: 1rem;
     align-items: baseline;
     padding: 6px 0;
-    border-bottom: 1px solid rgba(20,20,20,0.06);
+    border-bottom: 1px solid rgba(20,20,20,0.4);
     text-align: left;
 }
 .info-row:last-child { border-bottom: none; }

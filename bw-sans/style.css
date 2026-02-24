@@ -254,6 +254,14 @@ body {
 
 * { font-style: normal !important; }
 
+/* Footer border color (overrides global) */
+footer,
+footer *,
+footer *::before,
+footer *::after {
+    border-color: #e5e7eb !important;
+}
+
 /* Footer icons */
 .footer-icon-fix svg {
     width: 16px !important;

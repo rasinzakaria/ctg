@@ -391,3 +391,8 @@ footer .font-heading.text-xl.md\:text-2xl {
 .img-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
 @media (min-width: 768px) { .img-pair { gap: 1.25rem; } }
 .img-pair img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+
+.border-t {
+    border-color: #cccccc;
+}

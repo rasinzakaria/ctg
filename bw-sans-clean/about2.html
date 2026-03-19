@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our mission is to provide quality branded products at extremely competitive prices that represent high perceived value to your consumers.">
+    <title>About | CTG Brands</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e5e7eb;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            padding-bottom: 3.5rem;
+        }
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #141414;
+        }
+        .timeline-year {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            color: #141414;
+        }
+        .timeline-text {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #2d2d2d;
+        }
+        .timeline-img {
+            margin-top: 1.25rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .timeline-img img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+        }
+        .placeholder-img {
+            background: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            border-radius: 8px;
+        }
+        .placeholder-img.landscape {
+            aspect-ratio: 16 / 9;
+        }
+        .placeholder-img.portrait {
+            aspect-ratio: 4 / 5;
+        }
+
+        @media (min-width: 768px) {
+            .timeline::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .timeline-item {
+                width: 50%;
+                padding-bottom: 4rem;
+            }
+            .timeline-item:nth-child(odd) {
+                padding-left: 0;
+                padding-right: 3.5rem;
+                text-align: right;
+            }
+            .timeline-item:nth-child(even) {
+                margin-left: 50%;
+                padding-left: 3.5rem;
+                padding-right: 0;
+            }
+            .timeline-item:nth-child(odd)::before {
+                left: auto;
+                right: -6px;
+            }
+            .timeline-item:nth-child(even)::before {
+                left: -6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <nav class="header-nav">
+            <button id="mobileMenuBtn" class="mobile-only">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+            <ul class="nav-links left body12-caps">
+                <li><a href="#">Everyday</a></li>
+                <li><a href="#">Seasonal</a></li>
+                <li><a href="#">Home Décor</a></li>
+                <li><a href="#">Brands</a></li>
+                <li><a href="#">Catalogs</a></li>
+                <li><a href="#">Sale</a></li>
+            </ul>
+            <a href="index.html" class="logo">
+                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands logo" class="logo-light">
+                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands logo" class="logo-dark">
+            </a>
+            <ul class="nav-links right body12-caps">
+                <li><a href="about2.html">Our Story</a></li>
+                <li><a href="#">Become A Retailer | Devenir Détaillant</a></li>
+                <li><a href="#" class="btn btn-dark">Login</a></li>
+            </ul>
+            <a href="#" class="mobile-only">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/>
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="body12-caps">Menu.</span>
+            <button id="mobileMenuClose">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <a href="#">Everyday</a>
+            <a href="#">Seasonal</a>
+            <a href="#">Home Décor</a>
+            <a href="#">Brands</a>
+            <a href="about2.html">Our Story</a>
+            <a href="#">Catalogs</a>
+            <a href="#">Sale</a>
+            <div class="menu-cta">
+                <a href="#" class="btn btn-light">Login</a>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="page-hero bg-wheat">
+            <div class="container max-w-content">
+            </div>
+        </section>
+
+        <!-- WHO WE ARE -->
+        <section class="section bg-wheat" style="padding-top: 0;">
+            <div class="container max-w-content">
+                <div class="grid grid-12 items-start">
+                    <div class="col-7 reveal">
+                        <p class="body-editorial mb-8">At CTG Brands, we don't just move products — we bring possibilities to life. Since 1985, we've been importing and distributing innovative consumer packaged goods across North America, earning the trust of thousands of retailers by consistently delivering on-trend, high-quality products.</p>
+                        <p class="body-editorial mb-6">With over 40 years of experience, our reach now extends across Canada, the United States, the Caribbean, and South America. Driven by a passion for innovation and a commitment to excellence, we stay ahead of what's next so that our partners always have access to products that excite, inspire, and keep customers coming back.</p>
+                        <blockquote class="pull-quote">
+                            Consumers are rarely driven by price alone. The focus at CTG is on <em>value</em> — and that's where the company excels.
+                        </blockquote>
+                        <p class="body-editorial mb-8">We bring years of wholesale expertise together with a hands-on, partner-first approach. From sourcing to fulfillment, we deliver clarity, speed, and market insight at every stage — helping our partners grow, season after season.</p>
+                        <a href="#" class="btn btn-dark">Become A Partner</a>
+                    </div>
+                    <div class="col-5 reveal reveal-d1">
+                        <figure>
+                            <div class="placeholder-img landscape" style="aspect-ratio: 4/5; min-height: 420px;">Placeholder — CTG Headquarters</div>
+                            <figcaption class="img-caption">CTG Brands headquarters — Vaughan, Ontario.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR JOURNEY — Timeline -->
+        <section class="section bg-white">
+            <div class="container max-w-content">
+
+                <div class="mb-14 reveal">
+                    <h2 class="section-heading md heading-editorial">Our Journey.</h2>
+                </div>
+
+                <!-- 1985 + 1993 -->
+                <figure class="img-pair mb-6 reveal">
+                    <div>
+                        <div class="placeholder-img portrait">Placeholder — Founding, 1985</div>
+                        <figcaption class="img-caption">The early days, 1985.</figcaption>
+                    </div>
+                    <div>
+                        <div class="placeholder-img portrait">Placeholder — Newkirk Warehouse, 1993</div>
+                        <figcaption class="img-caption">Newkirk warehouse opening, 1993.</figcaption>
+                    </div>
+                </figure>
+
+                <div class="grid grid-2 mb-14">
+                    <p class="body-editorial reveal">In 1985, Canasia Toys &amp; Gifts (CTG) Brands Inc. started as a small investment with three partners. Our first facility was a 3,000 square foot space in Downsview, Ontario with less than 300 products to offer. By 1993, we had opened our Newkirk warehouse with our star product — the Puppet — selling thousands of units within the year.</p>
+                    <p class="body-editorial reveal reveal-d1">In 1998, we made our first trip to China to source new items, expanding our product lines to include Seasonal and Home Décor merchandise. This was a pivotal moment — the beginning of CTG's transformation into a full-spectrum consumer goods distributor.</p>
+                </div>
+
+                <!-- 1998 China trip — full width -->
+                <figure class="mb-14 reveal">
+                    <div class="placeholder-img landscape" style="min-height: 340px;">Placeholder — Sourcing Trip, 1998</div>
+                    <figcaption class="img-caption">Sourcing trip to expand our product lines, 1998.</figcaption>
+                </figure>
+
+                <p class="body-editorial max-w-text mb-14 reveal">By 2003, we expanded to a 244,000 square foot multifunctional warehouse and showroom in Vaughan, Ontario. In 2005, CTG Brands proudly celebrated its 25th anniversary — a milestone that reflected two and a half decades of growth, resilience, and deep partnerships.</p>
+
+                <!-- 2003 + 2005 -->
+                <figure class="img-pair mb-14 reveal">
+                    <div>
+                        <div class="placeholder-img portrait">Placeholder — Vaughan Facility, 2003</div>
+                        <figcaption class="img-caption">Our Vaughan facility, 2003.</figcaption>
+                    </div>
+                    <div>
+                        <div class="placeholder-img portrait">Placeholder — 25th Anniversary, 2005</div>
+                        <figcaption class="img-caption">Celebrating 25 years, 2005.</figcaption>
+                    </div>
+                </figure>
+
+                <p class="body-editorial max-w-text mb-14 reveal">In 2015, we celebrated the grand opening of our 131,000 square foot Richmond facility in Vancouver — marking a new chapter of coast-to-coast coverage across Canada.</p>
+
+                <!-- 2015 Richmond — full width -->
+                <figure class="mb-14 reveal">
+                    <div class="placeholder-img landscape" style="min-height: 340px;">Placeholder — Richmond Grand Opening, 2015</div>
+                    <figcaption class="img-caption">Richmond, Vancouver grand opening, 2015.</figcaption>
+                </figure>
+
+                <div class="grid grid-2 mb-14">
+                    <p class="body-editorial reveal">In 2020, we acquired AZ Trading Co.'s home décor business and related assets — strengthening our position in the home décor category and expanding our product portfolio. By 2023, Malinda Distributors joined CTG Brands, marking our exciting expansion into the de-alcoholized wine category.</p>
+                    <p class="body-editorial reveal reveal-d1">In 2024, CTG Brands expanded beyond Canada, actively developing our presence in the United States market. This was a pivotal step toward becoming a truly North American distributor, laying the groundwork for significant growth ahead.</p>
+                </div>
+
+                <!-- 2020 + 2023 -->
+                <figure class="img-pair mb-14 reveal">
+                    <div>
+                        <div class="placeholder-img portrait">Placeholder — AZ Trading Acquisition, 2020</div>
+                        <figcaption class="img-caption">AZ Trading acquisition, 2020.</figcaption>
+                    </div>
+                    <div>
+                        <div class="placeholder-img portrait">Placeholder — Malinda Distributors, 2023</div>
+                        <figcaption class="img-caption">Malinda Distributors joins CTG, 2023.</figcaption>
+                    </div>
+                </figure>
+
+                <p class="body-editorial max-w-text mb-14 reveal">2025 marks a landmark year for CTG Brands. We celebrate our 40th anniversary while making bold strategic moves — developing a partnership with Kitchen Stuff Plus that grants exclusive U.S. distribution rights for the Canadian retailer's branded products, and completing the strategic acquisition of GiftCraft assets, accelerating our expansion across North America.</p>
+
+                <!-- 2024 + 2025 -->
+                <figure class="img-pair mb-6 reveal">
+                    <div>
+                        <div class="placeholder-img portrait">Placeholder — U.S. Expansion, 2024</div>
+                        <figcaption class="img-caption">Expanding into the U.S. market, 2024.</figcaption>
+                    </div>
+                    <div>
+                        <div class="placeholder-img portrait">Placeholder — 40th Anniversary, 2025</div>
+                        <figcaption class="img-caption">Celebrating 40 years, 2025.</figcaption>
+                    </div>
+                </figure>
+
+                <!-- 2025 milestones — full width -->
+                <figure class="reveal">
+                    <div class="placeholder-img landscape" style="min-height: 340px;">Placeholder — GiftCraft Acquisition, 2025</div>
+                    <figcaption class="img-caption">CTG Brands completes the strategic acquisition of GiftCraft assets, 2025.</figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- FULL TIMELINE -->
+        <section class="section bg-wheat">
+            <div class="container max-w-content">
+                <div class="mb-14 reveal">
+                    <h2 class="section-heading md heading-editorial">40 Years of Growth.</h2>
+                </div>
+                <div class="timeline reveal">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1985</div>
+                        <p class="timeline-text">Canasia Toys &amp; Gifts (CTG) Brands Inc. started as a small investment with three partners. Our first facility was a 3,000 square foot space in Downsview, Ontario with less than 300 products to offer.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1993</div>
+                        <p class="timeline-text">Newkirk warehouse opening with our star product, the Puppet, where we sold thousands of units quickly within the year.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1998</div>
+                        <p class="timeline-text">We visited China to source new items as we started to expand our product lines, adding Seasonal and Home Décor merchandise.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2003</div>
+                        <p class="timeline-text">Expanded to a 244,000 square foot multifunctional warehouse and showroom in Vaughan, Ontario.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2005</div>
+                        <p class="timeline-text">CTG Brands proudly celebrates its 25th anniversary.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2015</div>
+                        <p class="timeline-text">Richmond, Vancouver grand opening for our 131,000 square foot multifunctional warehouse and showroom.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2020</div>
+                        <p class="timeline-text">We acquired AZ Trading Co.'s home décor business and related assets.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <p class="timeline-text">Malinda Distributors joined CTG Brands, marking our expansion into the de-alcoholized wine category.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <p class="timeline-text">CTG Brands expanded beyond Canada, actively developing our presence in the United States market.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <p class="timeline-text">CTG Brands celebrates its 40th anniversary.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <p class="timeline-text">CTG developed a strategic partnership with Kitchen Stuff Plus, granting exclusive U.S. distribution rights for the Canadian retailer's branded products.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <p class="timeline-text">CTG completed the strategic acquisition of GiftCraft assets, accelerating CTG Brands' expansion across North America.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="section bg-white">
+            <div class="container max-w-content text-center">
+                <div class="cta-section reveal">
+                    <h2 class="heading-editorial">Growth is built on strong relationships, bold ideas, and the drive to help our partners succeed.</h2>
+                    <a href="#" class="btn btn-dark">Become A Retailer</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-newsletter">
+            <p class="footer-newsletter-text">Sign up for our eblasts and be the first to know about new products and special promotions.</p>
+            <form class="footer-form">
+                <input type="email" placeholder="Enter your email to subscribe">
+                <button type="submit" class="btn btn-light">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-divider">
+            <div class="footer-nav">
+                <div class="footer-columns">
+                    <div class="footer-col">
+                        <h4 class="body12-caps">General.</h4>
+                        <ul>
+                            <li><a href="about2.html">Our Story</a></li>
+                            <li><a href="#">New Releases</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Accessibility</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="body12-caps">Featured.</h4>
+                        <ul>
+                            <li><a href="#">Everyday</a></li>
+                            <li><a href="#">Seasonal</a></li>
+                            <li><a href="#">Home Décor</a></li>
+                            <li><a href="#">Brands</a></li>
+                            <li><a href="#">News</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="body12-caps">Resources.</h4>
+                        <ul>
+                            <li><a href="#">New Customers &amp; Forms</a></li>
+                            <li><a href="#">Become A Supplier</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="body12-caps">Connect.</h4>
+                        <div class="footer-social">
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.83-48.3 93.96 0 111.28 61.9 111.28 142.3V448z"/></svg>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; CTG Brands Inc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <div id="scrollToTop" class="scroll-to-top">
+        <a href="#" onclick="scrollToTop();return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        document.getElementById('mobileMenuClose').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+        window.addEventListener('scroll', function() {
+            var btn = document.getElementById('scrollToTop');
+            if (btn) { if (window.pageYOffset > 300) { btn.classList.add('show'); } else { btn.classList.remove('show'); } }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var revealEls = document.querySelectorAll('.reveal');
+            if (revealEls.length > 0 && 'IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) { entry.target.classList.add('revealed'); observer.unobserve(entry.target); }
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+                revealEls.forEach(function(el) { observer.observe(el); });
+            }
+        });
+    </script>
+
+</body>
+</html>

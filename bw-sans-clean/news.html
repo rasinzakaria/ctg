@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest news and announcements from CTG Brands Inc.">
+    <title>News | CTG Brands</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .news-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+        @media (min-width: 768px) {
+            .news-layout {
+                grid-template-columns: 1fr 240px;
+                gap: 4rem;
+            }
+        }
+
+        .news-card {
+            border-bottom: 1px solid #bfbfbf;
+            padding-bottom: 3rem;
+            margin-bottom: 3rem;
+        }
+        .news-card:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .news-card a {
+            display: block;
+        }
+        .news-card-img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+        }
+        .news-card-title {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-weight: 500;
+            font-size: 1.25rem;
+            line-height: 1.35;
+            margin-bottom: 0.75rem;
+        }
+        @media (min-width: 768px) {
+            .news-card-title { font-size: 1.5rem; }
+        }
+        .news-card-meta {
+            font-size: 0.75rem;
+            font-family: "Plus Jakarta Sans", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.25rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .news-card-category {
+            border: 1px solid #bfbfbf;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+        .news-card-excerpt {
+            font-size: 15px;
+            line-height: 1.85;
+        }
+        @media (min-width: 768px) {
+            .news-card-excerpt { font-size: 16px; line-height: 1.9; }
+        }
+        .news-card-read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-weight: 500;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-bottom: 1px solid #141414;
+            padding-bottom: 2px;
+        }
+
+        .news-sidebar {
+            order: -1;
+        }
+        @media (min-width: 768px) {
+            .news-sidebar {
+                order: 2;
+                position: sticky;
+                top: 120px;
+                align-self: start;
+            }
+        }
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+        .sidebar-heading {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #bfbfbf;
+        }
+        .sidebar-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+        .sidebar-list a {
+            font-size: 0.875rem;
+            font-weight: 300;
+            transition: opacity 0.3s ease;
+        }
+        .sidebar-list a:hover { opacity: 0.7; }
+        .sidebar-list a.active {
+            font-weight: 500;
+        }
+
+        .news-article-body {
+            max-width: 720px;
+        }
+        .news-article-body h2 {
+            font-family: "Plus Jakarta Sans", sans-serif;
+            font-weight: 500;
+            font-size: 1.125rem;
+            line-height: 1.4;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .news-article-body p {
+            font-size: 15px;
+            line-height: 1.85;
+            margin-bottom: 1.25rem;
+        }
+        @media (min-width: 768px) {
+            .news-article-body p { font-size: 16px; line-height: 1.9; }
+        }
+        .news-article-body a {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .news-article-body a:hover { opacity: 0.7; }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="mainHeader" class="site-header">
+        <nav class="header-nav">
+            <button id="mobileMenuBtn" class="mobile-only">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+
+            <ul class="nav-links left body12-caps">
+                <li><a href="#">Everyday</a></li>
+                <li><a href="#">Seasonal</a></li>
+                <li><a href="#">Home Décor</a></li>
+                <li><a href="#">Brands</a></li>
+                <li><a href="#">Catalogs</a></li>
+                <li><a href="#">Sale</a></li>
+            </ul>
+
+            <a href="index.html" class="logo">
+                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands logo" class="logo-light" />
+                <img src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTAyMS9jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIn19fQ==?3119=/media/1021/ctg.png" alt="CTG Brands logo" class="logo-dark" />
+            </a>
+
+            <ul class="nav-links right body12-caps">
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="#">Become A Retailer | Devenir Détaillant</a></li>
+                <li><a href="#" class="btn btn-dark">Login</a></li>
+            </ul>
+
+            <a href="#" class="mobile-only">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/>
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="body12-caps">Menu.</span>
+            <button id="mobileMenuClose">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <a href="#">Everyday</a>
+            <a href="#">Seasonal</a>
+            <a href="#">Home Décor</a>
+            <a href="#">Brands</a>
+            <a href="about.html">Our Story</a>
+            <a href="#">Catalogs</a>
+            <a href="#">Sale</a>
+            <div class="menu-cta">
+                <a href="#" class="btn btn-light">Login</a>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <!-- PAGE HEADER -->
+        <section class="section bg-white" style="padding-bottom: 0;">
+            <div class="container">
+                <div class="breadcrumb mb-6 reveal">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span class="current">News</span>
+                </div>
+                <h1 class="font-heading reveal" style="font-size: 2rem; margin-bottom: 0.5rem;">News</h1>
+            </div>
+        </section>
+
+        <section class="section bg-white">
+            <div class="container">
+                <div class="news-layout">
+
+                    <!-- MAIN CONTENT -->
+                    <div class="news-main">
+
+                        <!-- ARTICLE 1 -->
+                        <article class="news-card reveal">
+                            <a href="#">
+                                <img class="news-card-img" src="https://d39vqfq6hb7tje.cloudfront.net/eyJidWNrZXQiOiJlbXVuLXVtYnJhY28iLCJrZXkiOiJtZWRpYS1jdGcwODAvbWVkaWEvMTQ0Ni9naWZ0Y3JhZnQteC1jdGcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMTQwLCJoZWlnaHQiOjU1MCwiZml0IjoiY292ZXIifX19?3778=/media/1446/giftcraft-x-ctg.png" alt="CTG Brands Inc. Announces Strategic Acquisition of Giftcraft">
+                            </a>
+                            <div class="news-card-meta">
+                                <span>03 Sep 2025</span>
+                                <span class="news-card-category">CTG News</span>
+                            </div>
+                            <h2 class="news-card-title">CTG Brands X Giftcraft Announcement</h2>
+                            <div class="news-article-body">
+                                <h2 style="text-align: center; margin-top: 0;">CTG Brands Inc. Announces Strategic Acquisition of Giftcraft Assets, Strengthening Industry Leadership and Customer Experience</h2>
+                                <p><strong>Toronto, Ontario – September 03, 2025</strong> – As President of CTG Brands Inc. (<a href="https://www.ctgbrands.com">www.ctgbrands.com</a>), we're pleased to announce our strategic acquisition of key assets from Giftcraft (<a href="https://www.giftcraft.com">www.giftcraft.com</a>), a renowned wholesaler known for its premium-quality home décor, gifting, fashion, and lifestyle products.</p>
+                                <p>Giftcraft, based in Toronto, Ontario, brings over 75 years of proven excellence, serving more than 10,000 independent retailers across North America as well as major global retail chains such as Costco, Walmart, Barnes &amp; Noble, Canadian Tire, and Loblaw. This broad customer base reflects Giftcraft's strength across all retail channels, offering products that resonate with a wide range of consumers.</p>
+                                <p>This acquisition significantly enhances our ability to offer consumers and retailers an extensive range of products that blend essential everyday items with Giftcraft's distinctive, premium collections. Our intention is to operate Giftcraft independently, preserving its unique brand identity and culture. Following the closing of the transaction in early September, we will swiftly resume Giftcraft's wholesale business, ensuring a seamless transition and continued service to their valued customers. We will selectively integrate shared service functions to drive operational efficiency, allowing Giftcraft to focus on its core strengths and established market segments.</p>
+                                <p>We firmly believe this strategic move will further solidify our market leadership, offering distinct and meaningful value to our consumers, retailers, and vendor partners. By honoring Giftcraft's legacy and rapidly resuming its operations, we aim to enhance customer experiences, regain customer trust, and strengthen our industry partnerships.</p>
+                                <p>If you have any questions regarding this announcement, please feel free to reach out to us at <strong><a href="mailto:giftcraft@ctgbrands.com">giftcraft@ctgbrands.com</a></strong>.</p>
+                                <p style="margin-top: 2.5rem; margin-bottom: 0.25rem;">Warm regards,</p>
+                                <p><strong>Grant Pittam</strong><br>President<br>CTG Brands Inc.</p>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <!-- SIDEBAR -->
+                    <aside class="news-sidebar reveal">
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-heading">Archive</h3>
+                            <div class="sidebar-list">
+                                <a href="#" class="active">2025</a>
+                            </div>
+                        </div>
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-heading">Categories</h3>
+                            <div class="sidebar-list">
+                                <a href="#">CTG Blog</a>
+                                <a href="#">CTG News</a>
+                            </div>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-newsletter">
+            <p class="footer-newsletter-text">Sign up for our eblasts and be the first to know about new products and special promotions.</p>
+            <form class="footer-form">
+                <input type="email" placeholder="Enter your email to subscribe">
+                <button type="submit" class="btn btn-light">Subscribe</button>
+            </form>
+        </div>
+
+        <div class="footer-divider">
+            <div class="footer-nav">
+                <div class="footer-columns">
+                    <div class="footer-col">
+                        <h4 class="body12-caps">General.</h4>
+                        <ul>
+                            <li><a href="about.html">Our Story</a></li>
+                            <li><a href="#">New Releases</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Accessibility</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="body12-caps">Featured.</h4>
+                        <ul>
+                            <li><a href="#">Everyday</a></li>
+                            <li><a href="#">Seasonal</a></li>
+                            <li><a href="#">Home Décor</a></li>
+                            <li><a href="#">Brands</a></li>
+                            <li><a href="news.html">News</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="body12-caps">Resources.</h4>
+                        <ul>
+                            <li><a href="#">New Customers &amp; Forms</a></li>
+                            <li><a href="#">Become A Supplier</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="body12-caps">Connect.</h4>
+                        <div class="footer-social">
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.83-48.3 93.96 0 111.28 61.9 111.28 142.3V448z"/></svg>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; CTG Brands Inc. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <div id="scrollToTop" class="scroll-to-top">
+        <a href="#" onclick="scrollToTop();return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+            </svg>
+        </a>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('mainHeader');
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        document.getElementById('mobileMenuClose').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        window.addEventListener('scroll', function() {
+            var btn = document.getElementById('scrollToTop');
+            if (btn) {
+                if (window.pageYOffset > 300) {
+                    btn.classList.add('show');
+                } else {
+                    btn.classList.remove('show');
+                }
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var revealEls = document.querySelectorAll('.reveal');
+            if (revealEls.length > 0 && 'IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('revealed');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+                revealEls.forEach(function(el) { observer.observe(el); });
+            }
+        });
+    </script>
+
+</body>
+</html>

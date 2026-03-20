@@ -49,19 +49,19 @@ input, textarea { font: inherit; }
 
 .heading-editorial { font-style: italic !important; letter-spacing: -0.01em; }
 
-.body-editorial { font-size: 15px; line-height: 1.85; opacity: 0.6; }
+.body-editorial { font-size: 15px; line-height: 1.85; opacity: 1; }
 @media (min-width: 768px) { .body-editorial { font-size: 16px; line-height: 1.9; } }
 
-.intro-editorial { font-size: 17px; line-height: 1.8; opacity: 0.65; }
+.intro-editorial { font-size: 17px; line-height: 1.8; opacity: 1; }
 @media (min-width: 768px) { .intro-editorial { font-size: 19px; line-height: 1.75; } }
 
-.img-caption { font-size: 11px; font-style: italic !important; opacity: 0.38; margin-top: 0.75rem; line-height: 1.5; }
+.img-caption { font-size: 11px; font-style: italic !important; opacity: 1; margin-top: 0.75rem; line-height: 1.5; }
 
 .pull-quote {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 20px; line-height: 1.5; font-style: italic !important;
     border-left: 1.5px solid #bfbfbf;
-    padding-left: 1.5rem; margin: 2.5rem 0; opacity: 0.75;
+    padding-left: 1.5rem; margin: 2.5rem 0; opacity: 1;
 }
 @media (min-width: 768px) { .pull-quote { font-size: 24px; padding-left: 2rem; margin: 3rem 0; } }
 
@@ -447,7 +447,7 @@ input, textarea { font: inherit; }
 .card-desc {
     font-weight: 300;
     font-size: 0.875rem;
-    opacity: 0.8;
+    opacity: 1;
     margin-bottom: 0.75rem;
     max-width: 28rem;
 }
@@ -504,7 +504,7 @@ input, textarea { font: inherit; }
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 500;
     font-size: 0.875rem;
-    opacity: 0.8;
+    opacity: 1;
     font-style: normal !important;
 }
 
@@ -669,7 +669,7 @@ input, textarea { font: inherit; }
     }
 }
 
-.footer-col h4 { margin-bottom: 1rem; opacity: 0.6; }
+.footer-col h4 { margin-bottom: 1rem; opacity: 1; }
 .footer-col ul { display: flex; flex-direction: column; gap: 0.75rem; }
 .footer-col a {
     font-weight: 300;
@@ -699,7 +699,7 @@ input, textarea { font: inherit; }
     padding-top: 1.5rem;
     text-align: center;
 }
-.footer-bottom p { font-size: 0.75rem; opacity: 0.5; }
+.footer-bottom p { font-size: 0.75rem; opacity: 1; }
 
 /* Footer overrides border color */
 .site-footer, .site-footer *, .site-footer *::before, .site-footer *::after {
@@ -786,10 +786,10 @@ input, textarea { font: inherit; }
 .aspect-4-3    { aspect-ratio: 4/3; }
 
 /* ---------- Opacity Helpers ---------- */
-.opacity-40 { opacity: 0.4; }
-.opacity-50 { opacity: 0.5; }
-.opacity-60 { opacity: 0.6; }
-.opacity-80 { opacity: 0.8; }
+.opacity-40 { opacity: 1; }
+.opacity-50 { opacity: 1; }
+.opacity-60 { opacity: 1; }
+.opacity-80 { opacity: 1; }
 
 /* ---------- Breadcrumb ---------- */
 .breadcrumb {
@@ -798,10 +798,10 @@ input, textarea { font: inherit; }
     align-items: center;
     flex-wrap: wrap;
     font-size: 12px;
-    opacity: 0.4;
+    opacity: 1;
 }
 .breadcrumb a:hover { opacity: 0.7; }
-.breadcrumb .current { opacity: 0.7; }
+.breadcrumb .current { opacity: 1; }
 
 /* ---------- Careers ---------- */
 .job-row {
@@ -828,7 +828,7 @@ input, textarea { font: inherit; }
     font-size: 1rem;
 }
 @media (min-width: 768px) { .job-title { font-size: 1.125rem; } }
-.job-location { font-size: 0.875rem; opacity: 0.5; }
+.job-location { font-size: 0.875rem; opacity: 1; }
 
 .video-wrapper {
     position: relative;
@@ -887,7 +887,7 @@ input, textarea { font: inherit; }
 .faq-icon {
     font-size: 1.25rem;
     line-height: 1;
-    opacity: 0.3;
+    opacity: 1;
     transition: transform 0.3s ease;
     flex-shrink: 0;
 }
@@ -904,7 +904,7 @@ input, textarea { font: inherit; }
     padding-bottom: 2rem;
     font-size: 0.875rem;
     line-height: 1.6;
-    opacity: 0.6;
+    opacity: 1;
 }
 @media (min-width: 768px) { .faq-answer-inner { font-size: 15px; } }
 .faq-answer a { text-decoration: underline; text-underline-offset: 2px; opacity: 1; }
@@ -983,7 +983,7 @@ input, textarea { font: inherit; }
 .pdp-brand {
     display: block;
     margin-bottom: 0.75rem;
-    opacity: 0.4;
+    opacity: 1;
     transition: opacity 0.3s ease;
 }
 .pdp-brand:hover { opacity: 0.7; }
@@ -1081,7 +1081,7 @@ input, textarea { font: inherit; }
 }
 .detail-chevron {
     width: 1rem; height: 1rem;
-    opacity: 0.3;
+    opacity: 1;
     transition: transform 0.3s ease;
 }
 .detail-section.open .detail-chevron { transform: rotate(180deg); }
@@ -1091,11 +1091,11 @@ input, textarea { font: inherit; }
     grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
     font-size: 0.875rem;
-    opacity: 0.6;
+    opacity: 1;
 }
 .availability-header {
     font-size: 10px;
-    opacity: 0.6;
+    opacity: 1;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #bfbfbf;

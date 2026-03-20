@@ -43,7 +43,7 @@
         }
         .timeline-year {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.8rem;
+            font-size: 2.8rem;
             font-weight: 600;
             letter-spacing: 0.1em;
             text-transform: uppercase;
@@ -62,7 +62,7 @@
         .timeline-img {
             flex-shrink: 0;
             width: 100px;
-            border-radius: 8px;
+            border-radius: 0;
             overflow: hidden;
         }
         .timeline-img img {
@@ -70,8 +70,20 @@
             aspect-ratio: 1;
             object-fit: cover;
             display: block;
-            border-radius: 8px;
+            border-radius: 0;
         }
+        .timeline-item:nth-child(1) .timeline-img img { aspect-ratio: 3/4; }
+        .timeline-item:nth-child(2) .timeline-img img { aspect-ratio: 1; }
+        .timeline-item:nth-child(3) .timeline-img img { aspect-ratio: 4/3; }
+        .timeline-item:nth-child(4) .timeline-img img { aspect-ratio: 3/4; }
+        .timeline-item:nth-child(5) .timeline-img img { aspect-ratio: 1; }
+        .timeline-item:nth-child(6) .timeline-img img { aspect-ratio: 4/3; }
+        .timeline-item:nth-child(7) .timeline-img img { aspect-ratio: 1; }
+        .timeline-item:nth-child(8) .timeline-img img { aspect-ratio: 3/4; }
+        .timeline-item:nth-child(9) .timeline-img img { aspect-ratio: 4/3; }
+        .timeline-item:nth-child(10) .timeline-img img { aspect-ratio: 1; }
+        .timeline-item:nth-child(11) .timeline-img img { aspect-ratio: 3/4; }
+        .timeline-item:nth-child(12) .timeline-img img { aspect-ratio: 4/3; }
         .timeline-img .placeholder-img {
             width: 100%;
             aspect-ratio: 1;
@@ -136,6 +148,18 @@
             .timeline-img {
                 width: 200px;
             }
+            .timeline-item:nth-child(1) .timeline-img { width: 220px; }
+            .timeline-item:nth-child(2) .timeline-img { width: 180px; }
+            .timeline-item:nth-child(3) .timeline-img { width: 240px; }
+            .timeline-item:nth-child(4) .timeline-img { width: 190px; }
+            .timeline-item:nth-child(5) .timeline-img { width: 170px; }
+            .timeline-item:nth-child(6) .timeline-img { width: 230px; }
+            .timeline-item:nth-child(7) .timeline-img { width: 200px; }
+            .timeline-item:nth-child(8) .timeline-img { width: 210px; }
+            .timeline-item:nth-child(9) .timeline-img { width: 250px; }
+            .timeline-item:nth-child(10) .timeline-img { width: 180px; }
+            .timeline-item:nth-child(11) .timeline-img { width: 200px; }
+            .timeline-item:nth-child(12) .timeline-img { width: 220px; }
             .timeline-img .placeholder-img {
                 aspect-ratio: 4 / 3;
             }
@@ -365,7 +389,7 @@
                             <div class="timeline-year">2005</div>
                             <p class="timeline-text">CTG Brands proudly celebrates its 25th anniversary.</p>
                         </div>
-                        <div class="timeline-img"><img src="https://raw.githubusercontent.com/rasinzakaria/ctg/main/bw-sans-clean/NSM2.jpg" alt="CTG 25th anniversary, 2005" class="rounded"></div>
+                        <div class="timeline-img"></div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-info">
@@ -393,7 +417,7 @@
                             <div class="timeline-year">2024</div>
                             <p class="timeline-text">CTG Brands expanded beyond Canada, actively developing our presence in the United States market.</p>
                         </div>
-                        <div class="timeline-img"><img src="https://raw.githubusercontent.com/rasinzakaria/ctg/main/bw-sans-clean/NSM.jpg" alt="National Sales Meeting, 2024" class="rounded"></div>
+                        <div class="timeline-img"></div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-info">
@@ -407,7 +431,7 @@
                             <div class="timeline-year">2025</div>
                             <p class="timeline-text">CTG developed a strategic partnership with Kitchen Stuff Plus, granting exclusive U.S. distribution rights for the Canadian retailer's branded products.</p>
                         </div>
-                        <div class="timeline-img"><img src="https://raw.githubusercontent.com/rasinzakaria/ctg/main/bw-sans-clean/2025-KSP.jpg" alt="CTG x Kitchen Stuff Plus, 2025" class="rounded"></div>
+                        <div class="timeline-img"></div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-info">
